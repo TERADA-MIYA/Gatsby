@@ -1,0 +1,10 @@
+.postcard-inner {
+    border: 1px solid rebeccapurple;
+    margin-bottom: 4rem;
+    padding: 1.3rem;
+}
+
+.post-title {
+    display: grid;
+    grid-template-columns: 10% 90%;
+}

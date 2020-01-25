@@ -1,32 +1,38 @@
 import React from "react"
-import "bootstrap/dist/css/bootstrap.min.css"
+import { graphql, useStaticQuery } from 'gatsby'
+import PostCard from '../components/PostCard'
 import { Container, Row, Col } from "react-bootstrap"
 
-function Archive(props) {
-    return (
-        <Container>
-            This archive depends on {props.category} !
-                <Row>
-                <Col sm={12}> 최근 포스팅</Col >
-                <Col sm={6}>
-                    이곳에 포스트의 제목과 excerpt 작성시각 카테고리 등이 들어가고
-            </Col>
-                <Col sm={6}>여기에 코드 미리보기나 이미지가 올라갑니다.</Col>
-                <Col sm={6}>
-                    이곳에 포스트의 제목과 excerpt 작성시각 카테고리 등이 들어가고
-            </Col>
-                <Col sm={6}>여기에 코드 미리보기나 이미지가 올라갑니다.</Col>
-                <Col sm={6}>
-                    이곳에 포스트의 제목과 excerpt 작성시각 카테고리 등이 들어가고
-            </Col>
-                <Col sm={6}>여기에 코드 미리보기나 이미지가 올라갑니다.</Col>
-                <Col sm={6}>
-                    이곳에 포스트의 제목과 excerpt 작성시각 카테고리 등이 들어가고
-            </Col>
-                <Col sm={6}>여기에 코드 미리보기나 이미지가 올라갑니다.</Col>
-            </Row >
-        </Container >
-    )
+const Archive = (props) => {
+    const data = useStaticQuery(graphql`
+    query getAllPostsInKorean {
+        allMarkdownRemark(filter: {frontmatter: {lang: {eq: "kr"}}}) {
+          nodes {
+            frontmatter {
+              title
+              date(formatString: "MMM/D/YYYY")
+              excerpt
+              categories
+            }
+          }
+        }
+    }`)
+
+    const postArr = data.allMarkdownRemark.nodes
+
+    switch (props.category) {
+        default:
+            return (
+                <Container className='archive archive-all'>
+                    <div className='text-center h1' style={{ marginBottom: '20px' }}>Recent Posts</div>
+                    <Row>
+                        <Col sm={12}>
+                            <PostCard postArr={postArr} />
+                        </Col>
+                    </Row>
+                </Container>
+            )
+    }
 }
 
 export default Archive

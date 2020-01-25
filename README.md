@@ -28,5 +28,36 @@
 npm install --save gatsby-plugin-typography react-typography typography typography-theme-fairy-gates
 react-bootstrap
 bootstrap
+npm install --save gatsby-source-filesystem
+npm install --save gatsby-plugin-react-svg
+
+
+
+## 타이포그라피
+서체
 
 ## 사이트의 구성
+
+## 언어별
+jp 만들어서 튕구면 될거같은데...?
+
+## 포스트 프론트매터 규칙 정해아함
+
+## 모든 쿼리는 index.js 에서 쏴야함
+
+## 페이지 구성
+
+## POSTcard
+600x300 px
+
+## 카테고리 구성
+Javascript
+WebHacking
+Python
+React
+CSS
+Algorithm
+
+## 페이지네이션
+
+## ICON 작업

@@ -13,8 +13,8 @@ export default () => (
         <SiteHead />
         <SiteBanner />
       </div>
-      <div className="viewport-middle">
-        <Archive category="something" />
+      <div className="viewport-middle" >
+        <Archive />
       </div>
       <div className="viewport-bottom">
         <Footer />
