@@ -1,0 +1,24 @@
+.site-navbar-desktop {
+  display: block;
+}
+.site-navbar-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .site-navbar-desktop {
+    display: none;
+  }
+  .site-navbar-mobile {
+    display: block;
+  }
+}
+
+.bg-purple {
+  background-color: rebeccapurple;
+}
+
+.navbar-toggler {
+  border: 0;
+  outline: 0;
+}
