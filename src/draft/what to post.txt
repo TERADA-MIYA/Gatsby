@@ -1,0 +1,46 @@
+﻿// MAIN
+- 웹해킹
+- React - 리액트 노드js 서버
+
+E1GR3Y8Frakutne
+
+- jQuery-w3school ! https://infotake.tistory.com/88 ajax 
+
+// SUB
+- YAML 문법 : 사이드바
+- 파이썬 프로그램 만들기
+- jQuery 아약스
+- 파이썬으로 파일 읽고 쓰기
+- bootstrap
+- 미니멀 미스테이크로 블로그 생성하기
+- 지킬 블로그 구글 등록
+- css animation에 대하여
+- HTML 자주 쓰이지 않지만 알고잇으면 유용한 코드요소
+- API 자바스크립트 날씨 같은거 
+- 카테고리 페이지 그리드화
+- 사이드바 애매함 지금이 나을 수도..
+
+// MINOR
+- 구글 광고 넣기 이어서
+- 한국어 그닥 의미 
+- 플러그인 설치하기 모르겠음
+- 404 page 만들기
+- React in jekyll
+
+// LAB
+- layout을 archive로 하는 순간 자동적으로 지킬이 카테고리를 가져옴
+- include 는 _include 폴더의 html 가져옴
+- single.html은 포스트의 html, 여기의 side바가 포스트의 사이드바 결정함
+- archive-taxonomy는 아카이브의 html sidebar 
+- 한국어 지원안되는 문제
+- default에 구글 애드센스
+- home.html은 홈화면 html, archive 내부에 내용이 들어감.
+- index.html은 main 내부 타이틀 상단 내용 
+- dev 마크다운 페이지 필요해..? IT나 지킬로 옮겨야할 듯 
+- teaser 640 * 356
+- 깃헙에 가끔씩 백업
+- imgur 탈출
+
+
+//
+디시방탄갤 사진 호스팅 사이트..?

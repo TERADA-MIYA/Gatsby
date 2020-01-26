@@ -2,26 +2,32 @@ import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import SiteHead from "../components/SiteHead"
 import SiteBanner from "../components/SiteBanner"
-import Archive from '../layouts/archive'
+import GalleryArchive from '../layouts/GalleryArchive'
 import Footer from '../components/Footer'
 
-export default () => (
-  <div>
-    <div className="나중에 여기 메타정보 들어감"></div>
-    <div className="viewport">
-      <div className="viewport-top">
-        <SiteHead />
-        <SiteBanner />
+class Home extends React.Component {
+  render() {
+    return (
+      <div>
+        <div className="나중에 여기 메타정보 들어감"></div>
+        <div className="viewport">
+          <div className="viewport-top">
+            <SiteHead />
+            <SiteBanner />
+          </div>
+          <div className="viewport-middle" >
+            <GalleryArchive />
+          </div>
+          <div className="viewport-bottom">
+            <Footer />
+          </div>
+        </div>
       </div>
-      <div className="viewport-middle" >
-        <Archive />
-      </div>
-      <div className="viewport-bottom">
-        <Footer />
-      </div>
-    </div>
-  </div>
-)
+    )
+  }
+}
+export default Home
+
 
 // 레이아웃은 뷰포트 이외 렌더링
 // 뷰 포트 기준

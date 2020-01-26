@@ -1,7 +1,51 @@
-body {
-    background-color: #fff8fe;
-}
-
 .viewport {
     background-color: rgba(255, 255, 255, 0.985);
+}
+
+.viewport-bottom {
+    padding: 10px 0px;
+    background-color: rebeccapurple;
+}
+
+.wrapper-10 {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.wrapper-5-5 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.wrapper-50-50 {
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.wrapper-3-3-3 {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+.wrapper-2-2-2-2-2 {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
 }

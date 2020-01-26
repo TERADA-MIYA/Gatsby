@@ -1,0 +1,131 @@
+.gallery {
+    height: 31rem;
+    border-top: 2px solid rgba(105, 43, 204, 0.2);
+    border-bottom: 2px solid rgba(105, 43, 204, 0.2);
+}
+
+.galleryItem {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.galleryImg {
+    left: -9999px;
+    bottom: -9999px;
+    top: -9999px;
+    position: absolute;
+    margin: auto;
+    right: -9999px;
+}
+
+@media screen and (max-width: 500px) {
+    .gallery {
+        height: 31rem;
+        border-top: 2px solid rgba(105, 43, 204, 0.2);
+        border-bottom: 2px solid rgba(105, 43, 204, 0.2);
+    }
+
+    .galleryItem {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .galleryImg {
+        left: -9999px;
+        bottom: -9999px;
+        top: -9999px;
+        position: absolute;
+        margin: auto;
+        right: -9999px;
+    }
+}
+
+.galleryItem:hover .galleryImg {
+    opacity: 0.7;
+}
+
+.galleryItem:hover .title-preview {
+    opacity: 0;
+}
+
+
+
+.title-preview {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    height: 2rem;
+    overflow: hidden;
+    position: absolute;
+    transition: 0.5s ease;
+    opacity: 1;
+    font-size: 120%;
+    color: whitesmoke;
+    bottom: 0%;
+}
+
+.galleryItem:hover .post {
+    opacity: 1;
+}
+
+.galleryImg {
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+.post {
+    width: 100%;
+    border: 1px solid black;
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.post-date {
+    text-align: right;
+    margin-top: -5%;
+}
+
+.post-excerpt {
+    font-size: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    line-height: 1.2em;
+    /*webkit 지원안하는 브라우저 곱하기*/
+    height: 6.0em;
+}
+
+.post-title {
+    text-align: left;
+}
+
+.post-title,
+.post-date {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 2rem;
+    width: inherit;
+    color: white;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
