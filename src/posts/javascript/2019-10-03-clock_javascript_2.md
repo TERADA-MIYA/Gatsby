@@ -1,0 +1,112 @@
+---
+title: Javascript로 시계 만들기! (2/2)
+date: 2019-10-03 16:01 -0400
+excerpt : '자바스크립트와 css 를 이용하면 조금 더 멋진 시계를 만들 수 있습니다.'
+categories : "javascript"
+comments: true
+---
+
+`css` 를 이용해서 조금 더 멋진 시계를 만들어 볼 차례입니다.
+
+~~~~javascript
+root ─ index.html
+     └ index.js
+     └ index.css
+~~~~
+
+`HTML`에 `index.css`를 link한후, `css` 파일에 font를 설정하기 위해 다음과 같이 코드를 작성합니다.
+
+`index.css`
+~~~~css
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+
+#clock{
+    font-family: "Bangers";
+    font-size : 6em;
+}
+~~~~
+
+![1570086642728](https://drive.google.com/uc?id=1ks51rs0-utfXQwcZymHD63vraHDCfygY)
+
+이전보다는 조금 나아진 모습이네요. 위치를 정중앙으로 옮겨봅시다.
+
+`index.css`
+
+~~~~css
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+
+#clock{
+    font-family: "Bangers";
+    font-size : 6em;
+    position : absolute;
+    left : 50%;
+    transform : translateX(-50%);
+}
+~~~~
+
+*Note*: left 50% 는 요소의 가장왼쪽 기준으로 요소가 화면의 정중앙에 위치하도록합니다. 따라서 요소의 크기가 클수록 요소가 오른쪽으로 치우치게 보입니다. 이를 개선하기 위해 요소의 정중앙이 화면에 정중앙에 위치할 수 있게 `transform : translateX(-50%);`를 사용합니다.
+
+완성품은 다음과 같습니다.
+
+![1570087055742](https://drive.google.com/uc?id=1XIEE-EV3jXpEH8pQqsAEN9P3FqN32PB5)
+
+<center>00:00:00</center>
+{:#clock_2}
+
+<script>
+const clock = document.querySelector("#clock_2");
+function run() {
+    const date = new Date();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    clock.innerText = `${hours<10?`0${hours}`:`${hours}`}:${minutes < 10 ? `0${minutes}`:`${minutes}`}:${seconds<10? `0${seconds}`:`${seconds}`}`;
+}
+run();
+setInterval(run, 1000);
+</script>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+
+#clock_2 {
+    font-family: "Bangers";
+    font-size: 6em;   
+}
+</style>
+
+<style>
+.page h1:before {
+    padding-right: 0.3em;
+    color: #9ddcff;
+    content: "/";
+}
+
+.page h2:before {
+    padding-right: 0.3em;
+    color: #9ddcff;
+    content: "//";
+}
+
+.page h3:before {
+    padding-right: 0.3em;
+    color: #9ddcff;
+    content: "///";
+}
+
+p>code,
+a>code,
+li>code,
+figcaption>code,
+td>code {
+    padding-left: 0.18rem;
+    padding-right: 0.18rem;
+    padding-top: 0.09rem;
+    font-size: 0.8em;
+    background: #fff;
+    color: #5283f3;
+    border: solid 1px #e1e4e5;
+    border-radius: 0px;
+    font-family: open sans,clear sans,helvetica neue,Helvetica,Arial,sans-serif;
+}
+</style>

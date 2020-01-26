@@ -5,6 +5,7 @@ import { Row } from 'react-bootstrap'
 import Icon from '../components/Icon'
 
 const PostCard = (props) => {
+    console.log(props)
     const { arr } = props
     const result = arr.map((s) => {
         const post = s.frontmatter

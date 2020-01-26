@@ -7,8 +7,8 @@ import Index from "../layouts/index"
 // Archive는 독립적으로 Archive 생성
 const Archive = (props) => {
     const data = useStaticQuery(graphql`
-    query getAllPostsInKorean {
-        allMarkdownRemark(filter: {frontmatter: {lang: {eq: "kr"}}}) {
+    query getAllPosts {
+        allMarkdownRemark {
           nodes {
             frontmatter {
               title
@@ -25,7 +25,8 @@ const Archive = (props) => {
     let javascript = []
     let webhacking = []
     let react = []
-    let algoritm = []
+    let python = []
+    let algorithm = []
     let talk = []
     data.allMarkdownRemark.nodes.forEach(element => {
         switch (element.frontmatter.categories.toLowerCase()) {
@@ -38,9 +39,11 @@ const Archive = (props) => {
             case 'react':
                 react.push(element)
                 break
-            case 'algoritm':
-                algoritm.push(element)
+            case 'algorithm':
+                algorithm.push(element)
                 break
+            case 'python':
+                python.push(element)
             default:
                 talk.push(element)
                 break
@@ -55,6 +58,19 @@ const Archive = (props) => {
                         <Row>
                             <Col sm={12}>
                                 <PostCard arr={javascript} />
+                            </Col>
+                        </Row>
+                    </Container>
+                </Index>
+            )
+        case 'python':
+            return (
+                <Index>
+                    <Container className='archive archive-all'>
+                        <div className='text-center h1' style={{ marginBottom: '20px' }}>Recent Posts</div>
+                        <Row>
+                            <Col sm={12}>
+                                <PostCard arr={python} />
                             </Col>
                         </Row>
                     </Container>
@@ -86,14 +102,14 @@ const Archive = (props) => {
                     </Container>
                 </Index>
             )
-        case 'algoritm':
+        case 'algorithm':
             return (
                 <Index>
                     <Container className='archive archive-all'>
                         <div className='text-center h1' style={{ marginBottom: '20px' }}>Recent Posts</div>
                         <Row>
                             <Col sm={12}>
-                                <PostCard arr={algoritm} />
+                                <PostCard arr={algorithm} />
                             </Col>
                         </Row>
                     </Container>
