@@ -16,7 +16,7 @@ function Footer() {
                     <a href='https://www.instagram.com/matsunagasyun/' alt="Terada's instagram" ><Icon name='instagram' w='24' h='24' /></a>&nbsp;
                     <a href='https://twitter.com/DanteTerada' alt="Terada's twitter" ><Icon name='twitter' w='24' h='24' /></a>&nbsp;
                     <div>
-                        <span>{year} All rights reserved.</span>
+                        <span className='text-muted'>{year} All rights reserved.</span>
                     </div>
                 </div>
             </div>

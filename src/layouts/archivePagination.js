@@ -6,32 +6,51 @@ class archivePagination extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      postNumber: 0,
-      postToShow: 3,
       selected: 1,
+      postToShow: 3,
     }
     this.handleClick = this.handleClick.bind(this)
-    this.handleButton = this.handleButton.bind(this)
+    this.handleFirstButton = this.handleFirstButton.bind(this)
+    this.handlePrevButton = this.handlePrevButton.bind(this)
+    this.handleNextButton = this.handleNextButton.bind(this)
+    this.handleLastButton = this.handleLastButton.bind(this)
   }
-  handleButton(e) {
-    // 게시판 버튼 클릭시 실행
-    console.log(e.target.parentNode)
+  handleFirstButton() {
+    this.setState({
+      selected: 1
+    })
+
+  }
+  handlePrevButton() {
+    this.setState({
+      selected: this.state.selected - 1 > 0 ? this.state.selected - 1 : this.state.selected
+    })
+
+  }
+  handleNextButton() {
+    this.setState({
+      selected: this.state.selected + 1 <= Math.ceil(this.props.arr.length / this.state.postToShow) ? this.state.selected + 1 : this.state.selected
+    })
+
+  }
+  handleLastButton() {
+    this.setState({
+      selected: Math.ceil(this.props.arr.length / this.state.postToShow)
+    })
 
   }
   handleClick(e) {
     // 게시판 번호 클릭시 실행
     this.setState({
-      postNumber: 3 * e.target.innerText - 3,
       selected: e.target.innerText * 1 // 숫자
     })
     //document.documentElement.scrollTop = 0;
   }
 
   render() {
-    // 페이지 번호 1번 선택
-    //document.querySelector('.pagination-span').childNodes[2]
-    //
-    const { postNumber, postToShow } = this.state
+
+    const postNumber = 3 * (this.state.selected - 1)
+    const { postToShow } = this.state
     const numberOfPost = this.props.arr.length
     const { arr } = this.props
     const selectedPost = arr.filter(function (s, idx) {
@@ -41,7 +60,14 @@ class archivePagination extends React.Component {
       return (
         <div className="archive-post">
           <PostCard arr={selectedPost} />
-          <PaginationBar numberOfPost={numberOfPost} handleClick={this.handleClick} selected={this.state.selected} handleButton={this.handleButton} />
+          <PaginationBar
+            numberOfPost={numberOfPost}
+            handleClick={this.handleClick}
+            selected={this.state.selected}
+            handleFirstButton={this.handleFirstButton}
+            handlePrevButton={this.handlePrevButton}
+            handleNextButton={this.handleNextButton}
+            handleLastButton={this.handleLastButton} />
         </div>
       )
     }
