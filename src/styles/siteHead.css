@@ -6,3 +6,8 @@
   border: 0;
   outline: 0;
 }
+
+.site-navbar {
+  padding: 0;
+  height: 100%;
+}

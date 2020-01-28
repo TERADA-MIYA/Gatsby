@@ -1,13 +1,17 @@
 import React from "react"
 import { graphql } from 'gatsby'
-import Home from "../layouts/home"
-
+import About from "../layouts/about"
+import Index from '../layouts/index'
 
 export default ({ data }) => {
-  return (
-    <Home />)
+    return (
+        <Index>
+            <About />
+        </Index>
+    )
 }
 
+/* 쿼리는 나중에~
 export const query = graphql`
   query {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -28,3 +32,4 @@ export const query = graphql`
     }
   }
 `
+*/

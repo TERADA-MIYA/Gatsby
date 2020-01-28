@@ -1,8 +1,29 @@
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+    height: 100vh;
+}
+
 .viewport {
+    height: 100vh;
     background-color: rgba(255, 255, 255, 0.985);
 }
 
+.viewport-top {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 8vh;
+}
+
+.viewport-middle {
+    height: 90%;
+}
+
 .viewport-bottom {
+    position: relative;
+    bottom: 0;
+    width: 100%;
     padding: 10px 0px;
     background-color: rebeccapurple;
 }
@@ -10,6 +31,11 @@
 .wrapper-10 {
     display: grid;
     grid-template-columns: 100%;
+}
+
+.wrapper-3-7 {
+    display: grid;
+    grid-template-columns: 30% 70%;
 }
 
 .wrapper-5-5 {
