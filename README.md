@@ -25,16 +25,14 @@
 ## Terada dante's Blog
 
 ## Dependency
-npm install --save gatsby-plugin-typography react-typography typography typography-theme-fairy-gates
+npm install --save 
 react-bootstrap
 bootstrap
 npm install --save gatsby-source-filesystem
 npm install --save gatsby-plugin-react-svg
+npm install @material-ui/core
 
 
-
-## 타이포그라피
-서체
 
 ## 사이트의 구성
 
@@ -42,8 +40,6 @@ npm install --save gatsby-plugin-react-svg
 jp 만들어서 튕구면 될거같은데...?
 
 ## 포스트 프론트매터 규칙 정해아함
-
-## 모든 쿼리는 index.js 에서 쏴야함
 
 ## 페이지 구성
 
@@ -53,8 +49,7 @@ jp 만들어서 튕구면 될거같은데...?
 ## 모바일 홈 생각
 호버가 의미가 없죠
 
-## 카테고리 구성
-### 한국어로 하자
+### 카테고리
 자바스크립트
 웹 해킹
 파이썬
@@ -67,9 +62,10 @@ WebHacking
 Python
 React
 Algorithm
-
-## ICON 작업
-
-## 헤드사진은 최대한 가운데에 피사체가 있고 좋은 화질의 큰 사진
-
-## 페이지네이션 넘버링은 과제로 남겨두고,
+## Todos
+1. pagination
+2. Icon 작업
+3. category box 카드 이펙트?
+4. 폰트 설정
+5. 카테고리 페이지
+## 홈 사진은 최대한 가운데에 피사체가 있고 좋은 화질의 큰 사진

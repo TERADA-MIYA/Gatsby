@@ -1,7 +1,7 @@
 ---
 title: test
 excerpt: 'test markdown'
-tags: ['animals','chicago']
+tags: ['css','javascript', 'google']
 categories: 'python'
 ---
 

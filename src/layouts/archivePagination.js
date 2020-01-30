@@ -9,7 +9,6 @@ class archivePagination extends React.Component {
       selected: 1,
       postToShow: 3,
     }
-    console.log(this.props.tag)
     this.handleClick = this.handleClick.bind(this)
     this.handleFirstButton = this.handleFirstButton.bind(this)
     this.handlePrevButton = this.handlePrevButton.bind(this)

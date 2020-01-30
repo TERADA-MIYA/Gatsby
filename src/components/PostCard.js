@@ -3,21 +3,30 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/PostCard.css"
 import { Row } from "react-bootstrap"
 import Icon from "../components/Icon"
-
 function PostCard(props) {
   const result = props.arr.map(s => {
-    const post = s.frontmatter
+    const post = s.node.frontmatter
     const title = post.title
     const date = post.date
     const excerpt = post.excerpt.length > 110
       ? `${post.excerpt.substring(0, 110)}...`
       : post.excerpt
-    // const categories = post.categories 나중에 아이콘 쓸거임
+    if (post.tags) {
+      var iconArr = post.tags.map((s) => {
+        return (
+          <span>
+            <Icon name={`${s}`} w='24' h='24' />
+          </span>
+        )
+      })
+    }
+    console.log(iconArr)
     return (
       <div className="postcard-inner" key={Math.random()}>
         <Row className="aling-items-center">
           <div className="col-lg-6">
             <div style={{ overflow: "hidden", position: "relative" }}>
+              {/*이미지 크기 맞추고 그안에 핏인되게 조정 */}
               <img
                 alt="이미지는 alt를 가져야함"
                 src="https://source.unsplash.com/random/600x300"
@@ -30,7 +39,7 @@ function PostCard(props) {
             <p className="text-muted">{date}</p>
             <h5>{excerpt}</h5>
             <div>
-              <Icon name="python" w="24" h="24" />
+              {iconArr ? iconArr : null}
             </div>
           </div>
         </Row>

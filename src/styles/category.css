@@ -93,7 +93,10 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b384c', endColorstr='#da5de2', GradientType=1);
 }
 
-.box-inner {
+.box-inner a {}
+
+.box a {
+    text-decoration: none;
     text-align: center;
     position: absolute;
     top: 0%;
@@ -101,8 +104,4 @@
     width: 100%;
     height: 100%;
     transform: translateX(-50%);
-}
-
-.box a {
-    text-decoration: none;
 }
