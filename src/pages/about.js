@@ -1,14 +1,14 @@
 import React from "react"
-import { graphql } from 'gatsby'
+//import { graphql } from 'gatsby'
 import About from "../layouts/about"
 import Index from '../layouts/index'
 
 export default ({ data }) => {
-    return (
-        <Index>
-            <About />
-        </Index>
-    )
+  return (
+    <Index>
+      <About />
+    </Index>
+  )
 }
 
 /* 쿼리는 나중에~

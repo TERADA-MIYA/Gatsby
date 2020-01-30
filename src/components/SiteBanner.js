@@ -1,7 +1,7 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Carousel } from "react-bootstrap"
-
+import '../styles/SiteBanner.css'
 export default () => (
   <Carousel>
     <Carousel.Item>

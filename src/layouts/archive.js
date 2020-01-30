@@ -8,140 +8,156 @@ import Index from "../layouts/index"
 const Archive = props => {
   const data = useStaticQuery(graphql`
     query getAllPosts {
-      allMarkdownRemark {
-        nodes {
+      allMarkdownRemark{
+        edges{
+        node {
           frontmatter {
             title
             date(formatString: "MMM/D/YYYY")
             excerpt
             categories
+            tags
           }
         }
       }
     }
-  `)
-
-  // 카테고리별 포스트 배열 정의 후 PostCard 컴포넌트에 전송하여 렌더링
-  let javascript = []
-  let webhacking = []
-  let react = []
-  let python = []
-  let algorithm = []
-  let talk = []
-  data.allMarkdownRemark.nodes.forEach(element => {
-    switch (element.frontmatter.categories.toLowerCase()) {
-      case "javascript":
-        javascript.unshift(element)
-        break
-      case "webhacking":
-        webhacking.unshift(element)
-        break
-      case "react":
-        react.unshift(element)
-        break
-      case "algorithm":
-        algorithm.unshift(element)
-        break
-      case "python":
-        python.unshift(element)
-        break
-      default:
-        talk.unshift(element)
-        break
-    }
-  })
-  switch (props.categories) {
-    case "javascript":
-      return (
-        <Index>
-          <Container className="archive archive-all">
-            <div className="text-center h1" style={{ marginBottom: "20px" }}>
-              Recent Posts
-            </div>
-            <Row>
-              <Col sm={12}>
-                <ArchivePagination arr={javascript} />
-              </Col>
-            </Row>
-          </Container>
-        </Index>
-      )
-    case "python":
-      return (
-        <Index>
-          <Container className="archive archive-all">
-            <div className="text-center h1" style={{ marginBottom: "20px" }}>
-              Recent Posts
-            </div>
-            <Row>
-              <Col sm={12}>
-                <ArchivePagination arr={python} />
-              </Col>
-            </Row>
-          </Container>
-        </Index>
-      )
-    case "webhacking":
-      return (
-        <Index>
-          <Container className="archive archive-all">
-            <div className="text-center h1" style={{ marginBottom: "20px" }}>
-              Recent Posts
-            </div>
-            <Row>
-              <Col sm={12}>
-                <ArchivePagination arr={webhacking} />
-              </Col>
-            </Row>
-          </Container>
-        </Index>
-      )
-    case "react":
-      return (
-        <Index>
-          <Container className="archive archive-all">
-            <div className="text-center h1" style={{ marginBottom: "20px" }}>
-              Recent Posts
-            </div>
-            <Row>
-              <Col sm={12}>
-                <ArchivePagination arr={react} />
-              </Col>
-            </Row>
-          </Container>
-        </Index>
-      )
-    case "algorithm":
-      return (
-        <Index>
-          <Container className="archive archive-all">
-            <div className="text-center h1" style={{ marginBottom: "20px" }}>
-              Recent Posts
-            </div>
-            <Row>
-              <Col sm={12}>
-                <ArchivePagination arr={algorithm} />
-              </Col>
-            </Row>
-          </Container>
-        </Index>
-      )
-    default:
-      return (
-        <Index>
-          <Container className="archive archive-all">
-            <div className="text-center h1" style={{ marginBottom: "20px" }}>
-              Recent Posts
-            </div>
-            <Row>
-              <Col sm={12}>
-                <ArchivePagination arr={talk} />
-              </Col>
-            </Row>
-          </Container>
-        </Index>
-      )
   }
+  `)
+  console.log(props.categories)
+  /*
+  const postAll = data.allMarkdownRemark.edges[0].node
+  const postFiltered = postAll.filter(function (e) {
+    return e.node.frontmatter.categories === props.categories
+  })
+  */
+  //console.log(postFiltered)
+  return (
+    <div>hi</div>
+  )
 }
 
+/*
+// 카테고리별 포스트 배열 정의 후 PostCard 컴포넌트에 전송하여 렌더링
+let javascript = []
+let webhacking = []
+let react = []
+let python = []
+let algorithm = []
+let talk = []
+data.allMarkdownRemark.nodes.forEach(element => {
+  switch (element.frontmatter.categories.toLowerCase()) {
+    case "javascript":
+      javascript.unshift(element)
+      break
+    case "webhacking":
+      webhacking.unshift(element)
+      break
+    case "react":
+      react.unshift(element)
+      break
+    case "algorithm":
+      algorithm.unshift(element)
+      break
+    case "python":
+      python.unshift(element)
+      break
+    default:
+      talk.unshift(element)
+      break
+  }
+})
+switch (props.categories) {
+  case "javascript":
+    return (
+      <Index>
+        <Container className="archive archive-all">
+          <div className="text-center h1" style={{ marginBottom: "20px" }}>
+            Recent Posts
+          </div>
+          <Row>
+            <Col sm={12}>
+              <ArchivePagination arr={javascript} />
+            </Col>
+          </Row>
+        </Container>
+      </Index>
+    )
+  case "python":
+    return (
+      <Index>
+        <Container className="archive archive-all">
+          <div className="text-center h1" style={{ marginBottom: "20px" }}>
+            Recent Posts
+          </div>
+          <Row>
+            <Col sm={12}>
+              <ArchivePagination arr={python} tag={data.allMarkdownRemark.node.frontmatter.tag} />
+            </Col>
+          </Row>
+        </Container>
+      </Index>
+    )
+  case "webhacking":
+    return (
+      <Index>
+        <Container className="archive archive-all">
+          <div className="text-center h1" style={{ marginBottom: "20px" }}>
+            Recent Posts
+          </div>
+          <Row>
+            <Col sm={12}>
+              <ArchivePagination arr={webhacking} />
+            </Col>
+          </Row>
+        </Container>
+      </Index>
+    )
+  case "react":
+    return (
+      <Index>
+        <Container className="archive archive-all">
+          <div className="text-center h1" style={{ marginBottom: "20px" }}>
+            Recent Posts
+          </div>
+          <Row>
+            <Col sm={12}>
+              <ArchivePagination arr={react} />
+            </Col>
+          </Row>
+        </Container>
+      </Index>
+    )
+  case "algorithm":
+    return (
+      <Index>
+        <Container className="archive archive-all">
+          <div className="text-center h1" style={{ marginBottom: "20px" }}>
+            Recent Posts
+          </div>
+          <Row>
+            <Col sm={12}>
+              <ArchivePagination arr={algorithm} />
+            </Col>
+          </Row>
+        </Container>
+      </Index>
+    )
+  default:
+    return (
+      <Index>
+        <Container className="archive archive-all">
+          <div className="text-center h1" style={{ marginBottom: "20px" }}>
+            Recent Posts
+          </div>
+          <Row>
+            <Col sm={12}>
+              <ArchivePagination arr={talk} />
+            </Col>
+          </Row>
+        </Container>
+      </Index>
+    )
+}
+}
+*/
 export default Archive

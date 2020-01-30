@@ -4,6 +4,18 @@ import Github from '../icons/github.svg'
 import Mail from '../icons/mail.svg'
 import Instagram from '../icons/instagram.svg'
 import Twitter from '../icons/twitter.svg'
+import Excel from '../icons/excel.svg'
+import Javascript from '../icons/javascript.svg'
+import Jquery from '../icons/jquery.svg'
+import Css from '../icons/css.svg'
+import Html from '../icons/html.svg'
+import Jekyll from '../icons/jekyll.svg'
+import Google from '../icons/google.svg'
+import Markdown from '../icons/markdown.svg'
+import Language from '../icons/language.svg'
+import Rreact from '../icons/react.svg'
+import Webhacking from '../icons/webhacking.svg'
+import Algorithm from '../icons/algorithm.svg'
 
 const Icon = (props) => {
     return (
@@ -11,9 +23,56 @@ const Icon = (props) => {
     )
 }
 
-
 function getIcon(name, w, h) {
-    switch (name) {
+    switch (name.toLowerCase()) {
+        case 'algorithm':
+            return (
+                <Algorithm width={`${w}`} height={`${h}`} />
+            )
+        case 'webhacking':
+            return (
+                <Webhacking width={`${w}`} height={`${h}`} />
+            )
+        case 'rreact':
+            return (
+                <Rreact width={`${w}`} height={`${h}`} />
+            )
+        case 'language':
+            return (
+                <Language width={`${w}`} height={`${h}`} />
+            )
+        case 'markdown':
+            return (
+                <Markdown width={`${w}`} height={`${h}`} />
+            )
+        case 'google':
+            return (
+                <Google width={`${w}`} height={`${h}`} />
+            )
+        case 'jekyll':
+            return (
+                <Jekyll width={`${w}`} height={`${h}`} />
+            )
+        case 'html':
+            return (
+                <Html width={`${w}`} height={`${h}`} />
+            )
+        case 'css':
+            return (
+                <Css width={`${w}`} height={`${h}`} />
+            )
+        case 'jquery':
+            return (
+                <Jquery width={`${w}`} height={`${h}`} />
+            )
+        case 'javascript':
+            return (
+                <Javascript width={`${w}`} height={`${h}`} />
+            )
+        case 'excel':
+            return (
+                <Excel width={`${w}`} height={`${h}`} />
+            )
         case 'twitter':
             return (
                 <Twitter width={`${w}`} height={`${h}`} />

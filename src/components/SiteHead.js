@@ -24,7 +24,7 @@ export default () => (
     </div>
     <div className="mobile">
       <Navbar bg="purple" expand="lg" >
-        <Navbar.Brand href="#home" style={{ color: "white" }}> 테라다 단테의 블로그 </Navbar.Brand>
+        <Navbar.Brand href="#home" style={{ color: "white" }}> <Link to="/" style={{ color: 'white' }}>테라다 단테의 블로그 </Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" style={{ color: 'white' }}>
           <Nav className="mr-auto">

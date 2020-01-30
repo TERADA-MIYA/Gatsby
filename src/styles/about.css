@@ -1,6 +1,6 @@
 .profile-background {
     background: linear-gradient(135deg, #e2a9e5 15%, #2b94e5 100%);
-    height: 90vh;
+    height: inherit;
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;

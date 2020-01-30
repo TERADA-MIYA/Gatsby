@@ -12,7 +12,7 @@ class About extends React.Component {
     componentDidMount() {
         const myBirthday = new Date(1994, 6, 17)
         setInterval(() => {
-            const date = new Date
+            const date = new Date()
             this.setState({
                 age: (date - myBirthday) / 31536000000
             })
@@ -20,11 +20,11 @@ class About extends React.Component {
     }
     render() {
         return (
-            <div className='wrapper-3-7'>
+            <div className='wrapper-3-7 height-inherit'>
                 <div className='profile-background'>
                     <div className='profile-box'>
                         <div className='myName'>Terada</div>
-                        <div className='myAge'>{this.state.age.toString().substring(0, 15)}歳</div>
+                        <div className='myAge'>{(this.state.age.toString()).substring(0, 15)}歳</div>
                         <div className='myLocation'>福岡</div>
                         <div className='myMail'>terada.syun.kim@gmail.com</div>
                         <div className='mySNS'>SNS</div>

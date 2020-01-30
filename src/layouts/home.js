@@ -13,9 +13,9 @@ class Home extends React.Component {
         <div className="viewport">
           <div className="viewport-top">
             <SiteHead />
-            <SiteBanner />
           </div>
           <div className="viewport-middle" >
+            <SiteBanner />
             <GalleryArchive />
           </div>
           <div className="viewport-bottom">
