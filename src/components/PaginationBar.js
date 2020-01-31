@@ -11,10 +11,33 @@ class PaginationBar extends React.Component {
   }
 
   render() {
+    const { page } = this.state
     let result = []
-    for (let i = 1; i <= this.state.page; i++) {
-      i === this.props.selected ? result.push(<Pagination.Item key={Math.random()} className='active' onClick={this.props.handleClick}>{`${i}`}</Pagination.Item>) : result.push(<Pagination.Item onClick={this.props.handleClick} key={Math.random()}>{`${i}`}</Pagination.Item>)
+    if (this.props.selected === 1 || this.props.selected === 2) {
+      for (let i = 1; i <= this.state.page; i++) {
+        if (i > 3) { break }
+        i === this.props.selected ? result.push(<Pagination.Item key={Math.random()} onClick={this.props.handleClick} className='active'>{`${i}`}</Pagination.Item>) : result.push(<Pagination.Item key={Math.random()} onClick={this.props.handleClick}>{`${i}`}</Pagination.Item>)
+      }
+      if (3 < this.state.page) {
+        result.push(<Pagination.Ellipsis key={Math.random()} />)
+        result.push(<Pagination.Item key={Math.random()} onClick={this.props.handleClick}>{`${this.state.page}`}</Pagination.Item>)
+      }
     }
+    else {
+      for (let i = this.props.selected - 1; i <= this.state.page; i++) {
+        if (i - this.props.selected > 1) { break }
+        i === this.props.selected ? result.push(<Pagination.Item key={Math.random()} onClick={this.props.handleClick} className='active'>{`${i}`}</Pagination.Item>) : result.push(<Pagination.Item key={Math.random()} onClick={this.props.handleClick}>{`${i}`}</Pagination.Item>)
+      }
+      if (this.props.selected + 1 < this.state.page) {
+        result.push(<Pagination.Ellipsis key={Math.random()} />)
+        result.push(<Pagination.Item key={Math.random()} onClick={this.props.handleClick}>{`${this.state.page}`}</Pagination.Item>)
+      }
+      if (1 < this.props.selected - 2) {
+        result.unshift(<Pagination.Ellipsis key={Math.random()} />)
+        result.unshift(<Pagination.Item key={Math.random()} onClick={this.props.handleClick}>{`${1}`}</Pagination.Item>)
+      }
+    }
+
     return (
       <Row>
         <Col className="sm-12">

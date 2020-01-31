@@ -1,17 +1,9 @@
 ---
-title: "제이쿼리 배우기 2 - jQuery의 선택자, Selector"
-date: 2019-12-08
-categories: "javascript"
-excerpt: "제이쿼리의 선택자(Selector)에 대해서"
-comments: true
-author_profile: false
-header:
-    image: "/assets/images/head/jQuery_head.png"
-    teaser: "/assets/images/teaser/jQuery_teaser.png"
-toc: true 
-toc_label: "이번 포스트에서는 ..." 
-toc_icon: "chess-rook"
-toc_sticky: true
+title: '제이쿼리 배우기 2 - jQuery의 선택자, Selector'
+date: '2019-12-09'
+excerpt: '제이쿼리의 선택자(Selector)에 대해서'
+categories: 'javascript'
+tags: ['jquery', 'javascript']
 ---
 
 <!-- Post ID : h2e11xEh37 -->

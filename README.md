@@ -31,6 +31,7 @@ bootstrap
 npm install --save gatsby-source-filesystem
 npm install --save gatsby-plugin-react-svg
 npm install @material-ui/core
+npm install --save gatsby-plugin-react-helmet react-helmet
 
 
 
@@ -69,3 +70,9 @@ Algorithm
 4. 폰트 설정
 5. 카테고리 페이지
 ## 홈 사진은 최대한 가운데에 피사체가 있고 좋은 화질의 큰 사진
+
+## 마크다운 Rule
+1. 타이틀과 파일이름은 같게
+2. 쿼터는 싱글쿼터만 사용
+3. 카테고리는 지정된 밸류만
+4. 태그는 배열로 선언(아이콘)

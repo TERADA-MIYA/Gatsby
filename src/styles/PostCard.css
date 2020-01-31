@@ -14,3 +14,8 @@
     display: grid;
     grid-template-columns: 10% 90%;
 }
+
+.postcard-inner a {
+    text-decoration: none;
+    color: black;
+}

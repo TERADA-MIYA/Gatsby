@@ -24,6 +24,11 @@
     z-index: 10;
 }
 
+.wrapper-2-8 {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
 .wrapper-10 {
     display: grid;
     grid-template-columns: 100%;

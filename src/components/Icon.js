@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Python from '../icons/python.svg'
 import Github from '../icons/github.svg'
 import Mail from '../icons/mail.svg'
@@ -13,9 +13,11 @@ import Jekyll from '../icons/jekyll.svg'
 import Google from '../icons/google.svg'
 import Markdown from '../icons/markdown.svg'
 import Language from '../icons/language.svg'
-import Rreact from '../icons/react.svg'
+import Rreact from '../icons/Rreact.svg'
 import Webhacking from '../icons/webhacking.svg'
 import Algorithm from '../icons/algorithm.svg'
+import Php from '../icons/php.svg'
+import Mysql from '../icons/mysql.svg'
 
 const Icon = (props) => {
     return (
@@ -25,6 +27,14 @@ const Icon = (props) => {
 
 function getIcon(name, w, h) {
     switch (name.toLowerCase()) {
+        case 'mysql':
+            return (
+                <Mysql width={`${w}`} height={`${h}`} />
+            )
+        case 'php':
+            return (
+                <Php width={`${w}`} height={`${h}`} />
+            )
         case 'algorithm':
             return (
                 <Algorithm width={`${w}`} height={`${h}`} />
@@ -33,7 +43,7 @@ function getIcon(name, w, h) {
             return (
                 <Webhacking width={`${w}`} height={`${h}`} />
             )
-        case 'rreact':
+        case 'react':
             return (
                 <Rreact width={`${w}`} height={`${h}`} />
             )
@@ -95,7 +105,7 @@ function getIcon(name, w, h) {
             )
         default:
             return (
-                <Python width={`${w}`} height={`${h}`} />
+                <Fragment></Fragment>
             )
     }
 }

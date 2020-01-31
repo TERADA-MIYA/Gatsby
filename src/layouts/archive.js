@@ -6,12 +6,12 @@ import ArchivePagination from "../layouts/archivePagination"
 const Archive = props => {
   const data = useStaticQuery(graphql`
     query getAllPosts {
-      allMarkdownRemark{
+      allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}){
         edges{
         node {
           frontmatter {
             title
-            date(formatString: "MMM/D/YYYY")
+            date
             excerpt
             categories
             tags

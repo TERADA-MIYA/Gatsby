@@ -8,6 +8,7 @@ class archivePagination extends React.Component {
     this.state = {
       selected: 1,
       postToShow: 3,
+      arr: this.props.arr,
     }
     this.handleClick = this.handleClick.bind(this)
     this.handleFirstButton = this.handleFirstButton.bind(this)
@@ -48,31 +49,26 @@ class archivePagination extends React.Component {
   }
 
   render() {
-
     const postNumber = 3 * (this.state.selected - 1)
     const { postToShow } = this.state
-    const numberOfPost = this.props.arr.length
-    const { arr } = this.props
-    const selectedPost = arr.filter(function (s, idx) {
+    const numberOfPost = this.state.arr.length
+    const selectedPost = this.state.arr.filter(function (s, idx) {
       return postNumber <= idx && idx < postNumber + postToShow
     })
-    if (selectedPost.length > 0) {
-      return (
-        <div className="archive-post">
-          <PostCard arr={selectedPost} />
-          <PaginationBar
-            numberOfPost={numberOfPost}
-            handleClick={this.handleClick}
-            selected={this.state.selected}
-            handleFirstButton={this.handleFirstButton}
-            handlePrevButton={this.handlePrevButton}
-            handleNextButton={this.handleNextButton}
-            handleLastButton={this.handleLastButton} />
-        </div>
-      )
-    }
+    return (
+      <div className="archive-post">
+        <PostCard arr={selectedPost} />
+        <PaginationBar
+          numberOfPost={numberOfPost}
+          handleClick={this.handleClick}
+          selected={this.state.selected}
+          handleFirstButton={this.handleFirstButton}
+          handlePrevButton={this.handlePrevButton}
+          handleNextButton={this.handleNextButton}
+          handleLastButton={this.handleLastButton} />
+      </div>
+    )
   }
-
 }
 
 export default archivePagination
