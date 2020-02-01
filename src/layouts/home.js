@@ -4,28 +4,47 @@ import SiteHead from "../components/SiteHead"
 import SiteBanner from "../components/SiteBanner"
 import GalleryArchive from '../layouts/GalleryArchive'
 import Footer from '../components/Footer'
+import { graphql, useStaticQuery } from "gatsby"
 
-class Home extends React.Component {
-  render() {
-    return (
-      <div>
-        <div className="나중에 여기 메타정보 들어감"></div>
-        <div className="viewport">
-          <div className="viewport-top">
-            <SiteHead />
-          </div>
-          <div className="viewport-middle" >
-            <SiteBanner />
-            <GalleryArchive />
-          </div>
-          <div className="viewport-bottom">
-            <Footer />
-          </div>
+function Home() {
+  const data = useStaticQuery(graphql`
+      query getRecentPosts {
+        allMarkdownRemark(limit: 4, sort: {fields: frontmatter___date, order: DESC}) {
+          edges {
+            node {
+              frontmatter {
+                title
+                date
+                excerpt
+                categories
+                header {
+                  image
+                }
+              }
+            }
+          }
+        }
+      }
+    `)
+  return (
+    <div>
+      <div className="나중에 여기 메타정보 들어감"></div>
+      <div className="viewport">
+        <div className="viewport-top">
+          <SiteHead />
+        </div>
+        <div className="viewport-middle" >
+          <SiteBanner />
+          <GalleryArchive data={data} />
+        </div>
+        <div className="viewport-bottom">
+          <Footer />
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
+
 export default Home
 
 

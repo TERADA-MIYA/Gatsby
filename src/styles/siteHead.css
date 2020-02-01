@@ -2,6 +2,10 @@
   background-color: rebeccapurple;
 }
 
+.navbar {
+  width: 100%;
+}
+
 /*
 .navbar-toggler {
   border: 0;

@@ -5,7 +5,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-
+import { Link } from 'gatsby'
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
     return (
@@ -40,13 +40,15 @@ const useStyles = makeStyles(theme => ({
         flexGrow: 1,
         backgroundColor: theme.palette.background.paper,
         display: 'block',
-        height: 224,
         overflow: 'inherit',
     },
     tabs: {
         borderRight: `1px solid ${theme.palette.divider}`,
         overflow: 'inherit',
         overflowX: 'inherit',
+    },
+    tab: {
+        minHeight: 0,
     },
     scroller: {
         overflow: 'inherit',
@@ -62,6 +64,11 @@ const useStyles = makeStyles(theme => ({
         overflowX: 'inherit',
         fontSize: '0.8rem',
     },
+    scroller4: {
+        overflow: 'inherit',
+        overflowX: 'inherit',
+        fontSize: '0.6rem',
+    },
 }))
 
 export default function VerticalTabs(props) {
@@ -72,18 +79,26 @@ export default function VerticalTabs(props) {
         setValue(newValue)
     }
     const result = props.toc.map((s) => {
+        const regExp = /[\{\}\[\]\/?.,;:|\)*~`!^\+<>@\#$%&\\\=\(\'\"]/gi
         return (
             <Tab
+                key={s.value}
                 className={
                     s.depth < 3 ?
-                        `${classes.scroller} ${classes.scroller2}` :
-                        `${classes.scroller} ${classes.scroller3}`}
-                label={`${s.value}`} {...a11yProps(`${props.toc.indexOf(s)}`)}
-                key={s.value}
-            />
+                        `${classes.scroller} ${classes.scroller2} ${classes.tab}` :
+                        s.depth < 4 ?
+                            `${classes.scroller} ${classes.scroller3} ${classes.tab}` :
+                            `${classes.scroller} ${classes.scroller4} ${classes.tab}`
+                }
+                label={
+                    <Link to={`${props.slug}/#${(s.value.replace(regExp, '')).replace(/ /gi, '-').toLowerCase()}`}
+                    >{s.value}
+                    </Link>
+                } {...a11yProps(`${props.toc.indexOf(s)}`)}
+            >
+            </Tab>
         )
     })
-    console.log('result', result)
     return (
         <div className={classes.root}>
             <Tabs

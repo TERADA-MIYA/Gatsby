@@ -1,3 +1,9 @@
+.galleryArchive-mobile {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
 .gallery {
     height: 31rem;
     border-top: 2px solid rgba(105, 43, 204, 0.2);
@@ -9,6 +15,7 @@
     max-height: 100%;
     overflow: hidden;
     position: relative;
+    flex: 1;
 }
 
 .galleryImg {
@@ -53,22 +60,16 @@
 
 
 .title-preview {
-    font-size: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    word-wrap: break-word;
-    line-height: 1.5em;
-    height: 3.0em;
-    color: white;
     position: relative;
     bottom: -100%;
     transform: translateY(-120%);
+    display: block;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+
 }
 
 .galleryItem:hover .post {

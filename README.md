@@ -32,7 +32,7 @@ npm install --save gatsby-source-filesystem
 npm install --save gatsby-plugin-react-svg
 npm install @material-ui/core
 npm install --save gatsby-plugin-react-helmet react-helmet
-
+npm i -S gatsby-remark-autolink-headers
 
 
 ## 사이트의 구성
@@ -76,3 +76,11 @@ Algorithm
 2. 쿼터는 싱글쿼터만 사용
 3. 카테고리는 지정된 밸류만
 4. 태그는 배열로 선언(아이콘)
+
+## 自分の保存倉庫
+
+ログイン
+
+インスタグラムも！！！🎈🎃
+ボタン
+保存できる？
