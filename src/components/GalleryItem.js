@@ -8,20 +8,27 @@ export default (props) => {
     const img = frontmatter.header === null ? '' : frontmatter.header.image.replace('/static', '')
     return (
         <div className='galleryItem'>
-            <Link to={`/${frontmatter.categories}/${frontmatter.date}-${frontmatter.title}`} />
-            <img
-                className="galleryImg"
-                src={`/images/posts/header/${img}`}
-                alt={'postHeadImg'}
-            />
-            <div className='post'>
-                <p className='post-title'>
-                    {frontmatter.title}}
-                </p>
-                <h5 className='post-excerpt'>
-                    {frontmatter.excerpt}
-                </h5>
-            </div>
+            <Link to={`/${frontmatter.categories}/${frontmatter.date}-${frontmatter.title}`}>
+                <img
+                    className="galleryImg"
+                    src={`/images/posts/header/${img}`}
+                    alt={'postHeadImg'}
+                />
+            </Link>
+            <Link to={`/${frontmatter.categories}/${frontmatter.date}-${frontmatter.title}`}>
+                <div className='post'>
+                    <div className='post-name'>
+                        {frontmatter.title}
+                    </div>
+                    <div className='post-date '>
+                        {frontmatter.date}
+                    </div>
+                    <div className='post-excerpt'>
+                        {frontmatter.excerpt}
+                    </div>
+                </div>
+            </Link>
+
             <div className='title-preview'>
                 <h4>{frontmatter.title}</h4>
             </div>

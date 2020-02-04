@@ -18,6 +18,9 @@ import Webhacking from '../../static/icons/webhacking.svg'
 import Algorithm from '../../static/icons/algorithm.svg'
 import Php from '../../static/icons/php.svg'
 import Mysql from '../../static/icons/mysql.svg'
+import Gatsby from '../../static/icons/gatsby.svg'
+import Netlify from '../../static/icons/netlify.svg'
+import Nodejs from '../../static/icons/nodejs.svg'
 
 const Icon = (props) => {
     return (
@@ -27,6 +30,18 @@ const Icon = (props) => {
 
 function getIcon(name, w, h) {
     switch (name.toLowerCase()) {
+        case 'nodejs':
+            return (
+                <Nodejs width={`${w}`} height={`${h}`} />
+            )
+        case 'netlify':
+            return (
+                <Netlify width={`${w}`} height={`${h}`} />
+            )
+        case 'gatsby':
+            return (
+                <Gatsby width={`${w}`} height={`${h}`} />
+            )
         case 'mysql':
             return (
                 <Mysql width={`${w}`} height={`${h}`} />

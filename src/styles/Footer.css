@@ -1,3 +1,19 @@
 .site-footer {
     background-color: rebeccapurple;
+    display: flex;
+    flex-direction: row;
+}
+
+.site-footer-head {
+    flex: 1;
+}
+
+.site-footer-body {
+    flex: 2;
+}
+
+.site-footer-logo {
+    width: 150px;
+    height: 48px;
+    border: 1px solid;
 }

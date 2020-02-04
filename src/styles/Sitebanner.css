@@ -1,1 +1,15 @@
 /**/
+.site-banner-desktop {
+    width: 100vw;
+    height: 50vw;
+}
+
+.site-banner-desktop img {
+    width: 100vw;
+    height: 50vw;
+}
+
+.carousel-caption {
+    /* 생각좀 더 해봐야 할 듯*/
+    border: 1px solid;
+}

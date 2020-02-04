@@ -15,14 +15,18 @@ export default ({ data }) => {
             <ScrollTab categories={post.frontmatter.categories} toc={data.markdownRemark.headings} slug={data.markdownRemark.fields.slug} />
           </div>
           <Fragment>
-            <Post />
+            <Post>
+              <div className='post-body' dangerouslySetInnerHTML={{ __html: post.html }} />
+            </Post>
           </Fragment>
         </div>
       </div>
       <div className='mobile'>
         <div className='wrapper-10'>
           <Fragment>
-            <Post />
+            <Post>
+              <div className='post-body' dangerouslySetInnerHTML={{ __html: post.html }} />
+            </Post>
           </Fragment>
         </div>
       </div>

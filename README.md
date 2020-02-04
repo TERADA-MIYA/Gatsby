@@ -33,7 +33,7 @@ npm install --save gatsby-plugin-react-svg
 npm install @material-ui/core
 npm install --save gatsby-plugin-react-helmet react-helmet
 npm i -S gatsby-remark-autolink-headers
-
+npm install --save prismjs gatsby-transformer-remark gatsby-remark-prismjs
 
 ## 사이트의 구성
 
@@ -84,3 +84,5 @@ Algorithm
 インスタグラムも！！！🎈🎃
 ボタン
 保存できる？
+
+## 모바일은 아예 다르게

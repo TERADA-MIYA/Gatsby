@@ -83,7 +83,6 @@
 
 .post {
     width: 100%;
-    border: 1px solid black;
     transition: 0.5s ease;
     opacity: 0;
     position: absolute;
@@ -92,44 +91,25 @@
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+    background-color: rgba(105, 43, 204, 0.5);
+    overflow: hidden;
+}
+
+.post-name {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    padding: 0px 20px;
 }
 
 .post-date {
     text-align: right;
-    margin-top: -5%;
+    padding: 0px 20px;
+    color: thistle;
 }
 
 .post-excerpt {
-    font-size: 100%;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    /* 라인수 */
-    -webkit-box-orient: vertical;
-    word-wrap: break-word;
-    line-height: 1.2em;
-    /*webkit 지원안하는 브라우저 곱하기*/
-    height: 6.0em;
-}
-
-.post-title {
-    text-align: left;
-}
-
-.post-title,
-.post-date {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    height: 2rem;
-    width: inherit;
+    font-size: 0.9rem;
     color: white;
-    white-space: nowrap;
-    word-wrap: normal;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box;
+    text-align: left;
+    padding: 0px 20px;
 }
