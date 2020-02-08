@@ -19,3 +19,21 @@
     text-decoration: none;
     color: black;
 }
+
+.postcard-inner-desc {
+    padding: 10px;
+}
+
+.postcard-inner-desc p::before {
+    content: '# ';
+    color: rebeccapurple;
+}
+
+.blog-category-alert {
+    text-align: center;
+    margin: 20px 0px;
+    background-color: #663399;
+    border: none;
+    color: white;
+    border-radius: 0;
+}

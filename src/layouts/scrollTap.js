@@ -41,6 +41,8 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.background.paper,
         display: 'block',
         overflow: 'inherit',
+        position: 'sticky',
+        top: 0,
     },
     tabs: {
         borderRight: `1px solid ${theme.palette.divider}`,
@@ -49,6 +51,9 @@ const useStyles = makeStyles(theme => ({
     },
     tab: {
         minHeight: 0,
+        position: 'relative',
+        left: '50%',
+        transform: 'translateX(-50%)',
     },
     scroller: {
         overflow: 'inherit',
@@ -91,7 +96,7 @@ export default function VerticalTabs(props) {
                             `${classes.scroller} ${classes.scroller4} ${classes.tab}`
                 }
                 label={
-                    <Link to={`${props.slug}/#${(s.value.replace(regExp, '')).replace(/ /gi, '-').toLowerCase()}`}
+                    <Link style={{ color: 'black' }} to={`${props.slug}/#${(s.value.replace(regExp, '')).replace(/ /gi, '-').toLowerCase()}`}
                     >{s.value}
                     </Link>
                 } {...a11yProps(`${props.toc.indexOf(s)}`)}

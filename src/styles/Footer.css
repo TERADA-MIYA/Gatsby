@@ -1,19 +1,16 @@
-.site-footer {
+.footer {
     background-color: rebeccapurple;
-    display: flex;
-    flex-direction: row;
+    margin: 10px 0px;
 }
 
-.site-footer-head {
-    flex: 1;
+.footer-head {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    text-align: center;
 }
 
-.site-footer-body {
-    flex: 2;
-}
-
-.site-footer-logo {
-    width: 150px;
-    height: 48px;
-    border: 1px solid;
+.footer-tail {
+    text-align: center;
 }

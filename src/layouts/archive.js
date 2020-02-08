@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import ArchivePagination from "../layouts/archivePagination"
 
@@ -15,6 +15,9 @@ const Archive = props => {
             excerpt
             categories
             tags
+            header{
+              image
+            }
           }
         }
       }
@@ -27,9 +30,9 @@ const Archive = props => {
     return e.node.frontmatter.categories === props.categories
   })
   return (
-    <Fragment>
+    <>
       <ArchivePagination arr={postFiltered} />
-    </Fragment>
+    </>
   )
 }
 

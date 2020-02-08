@@ -1,11 +1,48 @@
-.post-item {
-    padding: 0px;
+.blog-post-head img {
+    width: 100%;
 }
 
-.post-body {
+.blog-post-item {
     padding: 10px;
 }
 
-.post-head img {
+.blog-post-item h2::before {
+    content: '// ';
+    color: rebeccapurple;
+}
+
+.blog-post-item hr {
+    border-top: 1.5px solid rgba(132, 0, 255, 0.2);
+}
+
+.blog-post-item h3::before {
+    content: '/// ';
+    color: rebeccapurple;
+}
+
+.blog-post-item h4::before {
+    content: '//// ';
+    color: rebeccapurple;
+}
+
+.blog-post-item img {
     width: 100%;
+}
+
+.blog-post-icon {
+    padding-left: 10px;
+    text-align: center;
+}
+
+.blog-post-title {
+    padding-left: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.blog-post-guide a {
+    color: inherit;
+    text-decoration: none;
+    border: none;
+    z-index: 100;
 }

@@ -27,7 +27,7 @@ function Home() {
       }
     `)
   return (
-    <div>
+    <>
       <div className="나중에 여기 메타정보 들어감"></div>
       <div className="viewport">
         <div className="viewport-top">
@@ -41,7 +41,7 @@ function Home() {
           <Footer />
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

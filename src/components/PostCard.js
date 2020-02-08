@@ -1,8 +1,7 @@
 import React from "react"
 import { Link } from 'gatsby'
 import "bootstrap/dist/css/bootstrap.min.css"
-import "../styles/PostCard.css"
-import { Row } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import Icon from "../components/Icon"
 import Date from '../components/Date'
 
@@ -15,6 +14,9 @@ function PostCard(props) {
     const excerpt = post.excerpt.length > 110
       ? `${post.excerpt.substring(0, 110)}...`
       : post.excerpt
+    if (post.header !== null) {
+      var headerImage = post.header.image
+    }
     if (post.tags) {
       var iconArr = post.tags.map((s) => {
         return (
@@ -28,24 +30,24 @@ function PostCard(props) {
       <div className="postcard-inner" key={Math.random()}>
         <Link to={`/${categories}/${date}-${title}/`}>
           <Row className="aling-items-center">
-            <div className="col-lg-6">
-              <div style={{ overflow: "hidden", position: "relative" }}>
-                {/*이미지 크기 맞추고 그안에 핏인되게 조정 */}
-                <img
-                  alt="이미지는 alt를 가져야함"
-                  src="https://source.unsplash.com/random/600x300"
-                  style={{ maxWidth: "100%" }}
-                />
+            <Col sm={6}>
+              <img
+                alt="post Header Image"
+                src={headerImage !== undefined ? `/images/posts/header/${headerImage}` : 'https://source.unsplash.com/user/erondu/800x400'}
+                style={{ width: "100%", height: '100%' }}
+              />
+            </Col>
+            <Col sm={6}>
+              <div className='postcard-inner-desc'>
+                <p className="h3 mt-4 mt-lg-0">{title}</p>
+                <span className="text-muted">{<Date date={date} />}</span>
+                <h5>{excerpt}</h5>
+                <div>
+                  {iconArr ? iconArr : null}
+                </div>
               </div>
-            </div>
-            <div className="col-lg-6">
-              <p className="h3 mt-4 mt-lg-0">{title}</p>
-              <p className="text-muted">{<Date date={date} />}</p>
-              <h5>{excerpt}</h5>
-              <div>
-                {iconArr ? iconArr : null}
-              </div>
-            </div>
+            </Col>
+
           </Row>
         </Link>
       </div >

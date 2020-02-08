@@ -1,27 +1,23 @@
 import React from 'react'
 import Icon from '../components/Icon'
 import '../styles/Footer.css'
-
-const date = new Date()
-const year = date.getFullYear()
+import { Row, Col } from 'react-bootstrap'
 
 function Footer() {
     return (
-        <div className='site-footer' style={{ backgroundColor: 'rebeccapurple' }}>
-            <div className='site-footer-head'>
-                - Powered by -<br />
-                <Icon name={'gatsby'} w={36} h={36} /> Gatsby<br />
-                <Icon name={'netlify'} w={36} h={36} /> Netlify <br />
-            </div>
-            <div className='site-footer-body' >
-                <a href='https://github.com/TERADA-MIYA' alt="Terada's github blog" ><Icon name='github' w='24' h='24' /></a>&nbsp;
-                    <a href='mailto:terada.syun.kim' alt="Mail to Terada" ><Icon name='mail' w='24' h='24' /></a>&nbsp;
-                    <a href='https://www.instagram.com/matsunagasyun/' alt="Terada's instagram" ><Icon name='instagram' w='24' h='24' /></a>&nbsp;
-                    <a href='https://twitter.com/DanteTerada' alt="Terada's twitter" ><Icon name='twitter' w='24' h='24' /></a>&nbsp;
-                    <div>
-                    <span className='text-muted'>{year} All rights reserved.</span>
-                </div>
-            </div>
+        <div className='footer'>
+            <Row>
+                <Col sm={5}>
+                    <div className='footer-head'>
+                        풍요롭고 간편한 세상을 위해 상상하는 테라다의 기술 블로그
+                    </div>
+                </Col>
+                <Col sm={5}>
+                    <div className='footer-tail'>
+                        <Icon name={'gatsby'} w={36} h={36} /> Gatsby <Icon name={'netlify'} w={36} h={36} /> Netlify <Icon name={'bootstrap'} w={36} h={36} /> Bootstrap
+                    </div>
+                </Col>
+            </Row>
         </div>
     )
 }

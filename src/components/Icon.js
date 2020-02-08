@@ -21,6 +21,7 @@ import Mysql from '../../static/icons/mysql.svg'
 import Gatsby from '../../static/icons/gatsby.svg'
 import Netlify from '../../static/icons/netlify.svg'
 import Nodejs from '../../static/icons/nodejs.svg'
+import Bootstrap from '../../static/icons/bootstrap.svg'
 
 const Icon = (props) => {
     return (
@@ -30,6 +31,10 @@ const Icon = (props) => {
 
 function getIcon(name, w, h) {
     switch (name.toLowerCase()) {
+        case 'bootstrap':
+            return (
+                <Bootstrap width={`${w}`} height={`${h}`} />
+            )
         case 'nodejs':
             return (
                 <Nodejs width={`${w}`} height={`${h}`} />

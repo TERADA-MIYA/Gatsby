@@ -16,63 +16,72 @@ function SiteBanner(props) {
   while (categoryArr.length > 3) {
     categoryArr.splice(Math.floor(Math.random() * categoryArr.length), 1)
   }
+  function categoryNameKorean(s) {
+    switch (s) {
+      case 'algorithm':
+        return '알고리즘'
+      case 'javascript':
+        return '자바스크립트'
+      case 'python':
+        return '파이썬'
+      case 'react':
+        return '리액트'
+      case 'webhacking':
+        return '웹 해킹'
+      default:
+        return '잡담'
+    }
+  }
   return (
-    <Fragment>
-      <div className='desktop'>
-        <div className='site-banner-desktop'>
-          < Carousel >
-            <Carousel.Item>
-              <img
-                className="d-block"
-                src={`/images/home/${categoryArr[0]}.jpg`}
-                // default 포토 정해야함
-                alt="Category 1"
-              />
-              <Carousel.Caption>
-                <Link to={`/${categoryArr[0]}`}>
-                  <h3>First slide label</h3>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Link>
-              </Carousel.Caption>
-            </Carousel.Item>
+    <div className='site-banner'>
+      < Carousel >
+        <Carousel.Item>
+          <img
+            className="d-block"
+            src={`/images/home/${categoryArr[0]}.jpg`}
+            // default 포토 정해야함
+            alt="Category 1"
+          />
+          <Carousel.Caption>
+            <Link to={`/${categoryArr[0]}`}>
+              <h3>{categoryNameKorean(categoryArr[0])}</h3>
+              <p>{categoryNameKorean(categoryArr[0])} 카테고리 페이지로 이동</p>
+            </Link>
+          </Carousel.Caption>
+        </Carousel.Item>
 
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={`/images/home/${categoryArr[1]}.jpg`}
-                // default 포토 정해야함
-                alt="Category 2"
-              />
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={`/images/home/${categoryArr[1]}.jpg`}
+            // default 포토 정해야함
+            alt="Category 2"
+          />
 
-              <Carousel.Caption>
-                <Link to={`/${categoryArr[1]}`}>
-                  <h3>Second slide label</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Link>
-              </Carousel.Caption>
-            </Carousel.Item>
+          <Carousel.Caption>
+            <Link to={`/${categoryArr[1]}`}>
+              <h3>{categoryNameKorean(categoryArr[1])}</h3>
+              <p>{categoryNameKorean(categoryArr[1])} 카테고리 페이지로 이동</p>
+            </Link>
+          </Carousel.Caption>
+        </Carousel.Item>
 
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={`/images/home/${categoryArr[2]}.jpg`}
-                // default 포토 정해야함
-                alt="Category 3"
-              />
-              <Carousel.Caption>
-                <Link to={`/${categoryArr[2]}`}>
-                  <h3>Third slide label</h3>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </Link>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel >
-        </div>
-      </div>
-      <div className='mobile'>
-
-      </div>
-    </Fragment>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={`/images/home/${categoryArr[2]}.jpg`}
+            // default 포토 정해야함
+            alt="Category 3"
+          />
+          <Carousel.Caption>
+            <Link to={`/${categoryArr[2]}`}>
+              <h3>{categoryNameKorean(categoryArr[2])}</h3>
+              <p>{categoryNameKorean(categoryArr[2])} 카테고리 페이지로 이동</p>
+            </Link>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel >
+    </div>
   )
 }
 

@@ -1,13 +1,35 @@
-.profile-background {
-    background: linear-gradient(135deg, #e2a9e5 15%, #2b94e5 100%);
-    height: inherit;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+.about {
+    display: flex;
+    flex-direction: row;
+    height: 94vh;
 }
 
-.profile-box {
+.about-profile {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    flex: 2;
+    background: linear-gradient(135deg, #e2a9e5 15%, #2b94e5 100%);
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.about-work {
+    order: 2;
+    flex: 8;
+    min-height: 94vh;
+    background: #4b384c;
+    background: -moz-linear-gradient(-45deg, #4b384c 15%, #da5de2 100%);
+    background: -webkit-linear-gradient(-45deg, #4b384c 15%, #da5de2 100%);
+    background: linear-gradient(135deg, #4b384c 15%, #da5de2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b384c', endColorstr='#da5de2', GradientType=1);
+}
+
+.about-work-temp {
     position: relative;
-    width: 100%;
-    border: 1px solid;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-weight: bolder;
 }

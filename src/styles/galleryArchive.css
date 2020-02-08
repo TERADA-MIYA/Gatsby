@@ -47,6 +47,11 @@
         margin: auto;
         right: -9999px;
     }
+
+    .title-preview {
+        transform: none !important;
+        -webkit-transform: translateY(100%) !important;
+    }
 }
 
 .galleryItem:hover .galleryImg {
@@ -91,25 +96,23 @@
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
-    background-color: rgba(105, 43, 204, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     overflow: hidden;
+    color: black;
 }
 
 .post-name {
     font-size: 1.5rem;
-    color: whitesmoke;
     padding: 0px 20px;
 }
 
 .post-date {
     text-align: right;
     padding: 0px 20px;
-    color: thistle;
 }
 
 .post-excerpt {
     font-size: 0.9rem;
-    color: white;
     text-align: left;
     padding: 0px 20px;
 }

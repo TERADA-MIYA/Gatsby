@@ -93,7 +93,11 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b384c', endColorstr='#da5de2', GradientType=1);
 }
 
-.box-inner a {}
+.box-inner {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 .box a {
     text-decoration: none;

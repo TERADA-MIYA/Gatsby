@@ -10,7 +10,7 @@ function createCategoryBox(arr) {
         switch (arr.indexOf(s) % 3) {
             case 0:
                 result.push(
-                    <Fragment key={Math.random()}>
+                    <Fragment key={s}>
                         <div className='blank'></div>
                         <CategoryBox name='box1' categories={`${s}`} />
                     </Fragment >
@@ -18,7 +18,7 @@ function createCategoryBox(arr) {
                 break
             case 1:
                 result.push(
-                    <Fragment key={Math.random()}>
+                    <Fragment key={s}>
                         <div className='blank'></div>
                         <CategoryBox name='box2' categories={`${s}`} />
                     </Fragment >
@@ -26,7 +26,7 @@ function createCategoryBox(arr) {
                 break
             case 2:
                 result.push(
-                    <Fragment key={Math.random()}>
+                    <Fragment key={s}>
                         <div className='blank'></div>
                         <CategoryBox name='box3' categories={`${s}`} />
                     </Fragment >
