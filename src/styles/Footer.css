@@ -4,13 +4,15 @@
 }
 
 .footer-head {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.8rem;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px 0px;
+    height: 3rem;
 }
 
 .footer-tail {
+    height: 3rem;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px 0px;
 }

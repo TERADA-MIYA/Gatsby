@@ -22,6 +22,9 @@ import Gatsby from '../../static/icons/gatsby.svg'
 import Netlify from '../../static/icons/netlify.svg'
 import Nodejs from '../../static/icons/nodejs.svg'
 import Bootstrap from '../../static/icons/bootstrap.svg'
+import Korea from '../../static/icons/korea.svg'
+import Japan from '../../static/icons/japan.svg'
+import Materialui from '../../static/icons/materialui.svg'
 
 const Icon = (props) => {
     return (
@@ -31,6 +34,18 @@ const Icon = (props) => {
 
 function getIcon(name, w, h) {
     switch (name.toLowerCase()) {
+        case 'materialui':
+            return (
+                <Materialui width={`${w}`} height={`${h}`} />
+            )
+        case 'korea':
+            return (
+                <Korea width={`${w}`} height={`${h}`} />
+            )
+        case 'japan':
+            return (
+                <Japan width={`${w}`} height={`${h}`} />
+            )
         case 'bootstrap':
             return (
                 <Bootstrap width={`${w}`} height={`${h}`} />

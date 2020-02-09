@@ -2,6 +2,11 @@
   background-color: rebeccapurple;
 }
 
+.siteHead-dropdown * {
+  background-color: slateblue !important;
+  border: none !important;
+}
+
 /*
 .navbar-toggler {
   border: 0;

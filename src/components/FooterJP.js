@@ -2,16 +2,16 @@ import React from 'react'
 import Icon from '../components/Icon'
 import '../styles/Footer.css'
 import { Row, Col } from 'react-bootstrap'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from "gatsby"
 
-function Footer() {
+function FooterJP() {
   const data = useStaticQuery(graphql`
-        query getFooter {
+        query getFooterInJapanese {
           allSite {
             edges {
               node {
                 siteMetadata {
-                  kr {
+                  jp {
                     footer
                   }
                 }
@@ -20,13 +20,13 @@ function Footer() {
           }
         }
     `)
-  const footer = data.allSite.edges[0].node.siteMetadata.kr.footer
+  const footer = data.allSite.edges[0].node.siteMetadata.jp.footer
   return (
     <div className='footer'>
       <Row>
         <Col sm={6}>
           <div className='footer-head'>
-            <p>{footer}</p>
+            {footer}
           </div>
         </Col>
         <Col sm={6}>
@@ -39,4 +39,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default FooterJP

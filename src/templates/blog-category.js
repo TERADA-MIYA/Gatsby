@@ -1,6 +1,6 @@
 import React from "react"
-import Archive from "../layouts/archive"
-import Index from "../layouts/index"
+import Archive from "../layouts/archiveJP"
+import IndexJP from "../layouts/indexJP"
 import { Container, Row, Col, Alert } from "react-bootstrap"
 import '../styles/PostCard.css'
 
@@ -10,7 +10,7 @@ export default ({ pageContext: { categories } }) => {
   // Archive 는 자체 쿼리로 페이지 내용 생성
   // 여기서 한번만 페이지 생성하고 싶다
   return (
-    <Index>
+    <IndexJP>
       <Container className="archive archive-all">
         <Alert className='blog-category-alert'>
           Recent Posts {`of ${categories}` || ''}
@@ -21,6 +21,6 @@ export default ({ pageContext: { categories } }) => {
           </Col>
         </Row>
       </Container>
-    </Index>
+    </IndexJP>
   )
 }

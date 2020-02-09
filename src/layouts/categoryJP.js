@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
-import CategoryBox from '../components/CategoryBox'
+import CategoryBoxJP from '../components/CategoryBoxJP'
 import '../styles/category.css'
 import { graphql, useStaticQuery } from "gatsby"
 //import CategoryCard from '../components/CategoryCard'
 
-function createCategoryBox(arr) {
+function createCategoryBoxJP(arr) {
     let result = []
     arr.forEach(s => {
         switch (arr.indexOf(s) % 3) {
@@ -12,7 +12,7 @@ function createCategoryBox(arr) {
                 result.push(
                     <Fragment key={s}>
                         <div className='blank'></div>
-                        <CategoryBox name='box1' categories={`${s}`} />
+                        <CategoryBoxJP name='box1' categories={`${s}`} />
                     </Fragment >
                 )
                 break
@@ -20,7 +20,7 @@ function createCategoryBox(arr) {
                 result.push(
                     <Fragment key={s}>
                         <div className='blank'></div>
-                        <CategoryBox name='box2' categories={`${s}`} />
+                        <CategoryBoxJP name='box2' categories={`${s}`} />
                     </Fragment >
                 )
                 break
@@ -28,7 +28,7 @@ function createCategoryBox(arr) {
                 result.push(
                     <Fragment key={s}>
                         <div className='blank'></div>
-                        <CategoryBox name='box3' categories={`${s}`} />
+                        <CategoryBoxJP name='box3' categories={`${s}`} />
                     </Fragment >
                 )
                 break
@@ -41,14 +41,14 @@ function createCategoryBox(arr) {
     return result
 }
 
-function Category() {
+function CategoryJP() {
     const data = useStaticQuery(graphql`
-    query getCategories {
-        allMarkdownRemark {
+    query getCategoriesInJapanese {
+        allMarkdownRemark(filter: {frontmatter: {lang: {eq: "jp"}}}) {
             nodes {
               frontmatter {
                 categories
-              }
+                }
             }
         }
     }
@@ -59,7 +59,7 @@ function Category() {
             categoriesArr.push(element.frontmatter.categories)
         }
     })
-    const result = createCategoryBox(categoriesArr)
+    const result = createCategoryBoxJP(categoriesArr)
     return (
         <Fragment>
             <div className='desktop'>
@@ -78,4 +78,4 @@ function Category() {
     )
 }
 
-export default Category
+export default CategoryJP

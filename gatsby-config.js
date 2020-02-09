@@ -1,4 +1,26 @@
 module.exports = {
+  siteMetadata: {
+    kr: {
+      title: '테라다 단테의 블로그',
+      home: '홈',
+      category: '카테고리',
+      about: '어바웃',
+      footer: '풍요롭고 간편한 세상을 위해 상상하는 테라다의 기술 블로그',
+      author: {
+        name: '테라다 단테', location: '후쿠오카', email: 'terada.syun.kim@gmail.com', word: '세상은 상상하는 것으로부터',
+      }
+    },
+    jp: {
+      title: 'Terada DanteノBlog',
+      home: 'Home',
+      category: 'Category',
+      about: 'About',
+      footer: '楽な世界を作ろう🔥',
+      author: {
+        name: 'Terada Dante', location: '福岡', email: 'terada.syun.kim@gmail.com', word: '創造は想像から',
+      }
+    },
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -92,5 +114,5 @@ module.exports = {
         }
       }
     }
-  ]
+  ],
 }

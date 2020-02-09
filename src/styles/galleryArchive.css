@@ -6,8 +6,6 @@
 
 .gallery {
     height: 31rem;
-    border-top: 2px solid rgba(105, 43, 204, 0.2);
-    border-bottom: 2px solid rgba(105, 43, 204, 0.2);
 }
 
 .galleryItem {
@@ -30,8 +28,6 @@
 @media screen and (max-width: 500px) {
     .gallery {
         height: 31rem;
-        border-top: 2px solid rgba(105, 43, 204, 0.2);
-        border-bottom: 2px solid rgba(105, 43, 204, 0.2);
     }
 
     .galleryItem {

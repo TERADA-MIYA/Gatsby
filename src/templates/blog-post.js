@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import Index from '../layouts/index'
 import ScrollTab from '../layouts/scrollTap'
@@ -21,7 +21,7 @@ export default ({ data }) => {
       <Row>
         <Col sm={12}>
           <div className="blog-post-head">
-            <img src={postHeaderImage !== undefined ? `/images/posts/header/${postHeaderImage}` : 'https://source.unsplash.com/random/1600x900'} />
+            <img alt='blog-post-head' src={postHeaderImage !== undefined ? `/images/posts/header/${postHeaderImage}` : 'https://source.unsplash.com/random/1600x900'} />
           </div>
         </Col>
       </Row>

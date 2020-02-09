@@ -11,7 +11,6 @@ class PaginationBar extends React.Component {
   }
 
   render() {
-    const { page } = this.state
     let result = []
     if (this.props.selected === 1 || this.props.selected === 2) {
       for (let i = 1; i <= this.state.page; i++) {

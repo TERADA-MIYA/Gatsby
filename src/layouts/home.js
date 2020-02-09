@@ -6,6 +6,7 @@ import GalleryArchive from '../layouts/GalleryArchive'
 import Footer from '../components/Footer'
 import { graphql, useStaticQuery } from "gatsby"
 
+
 function Home() {
   const data = useStaticQuery(graphql`
       query getRecentPosts {

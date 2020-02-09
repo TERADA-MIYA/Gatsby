@@ -32,7 +32,7 @@ function PostCard(props) {
           <Row className="aling-items-center">
             <Col sm={6}>
               <img
-                alt="post Header Image"
+                alt="post Header"
                 src={headerImage !== undefined ? `/images/posts/header/${headerImage}` : 'https://source.unsplash.com/user/erondu/800x400'}
                 style={{ width: "100%", height: '100%' }}
               />

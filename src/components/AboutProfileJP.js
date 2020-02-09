@@ -16,7 +16,7 @@ export default (props) => {
             <Card.Body>
                 <Card.Text>
                     <dd className='myName'><Name width='18px' height='18px' /> {author.name}</dd>
-                    <dd className='myAge'><Age width='18px' height='18px' /> 만 <AboutProfileAge /> 세</dd>
+                    <dd className='myAge'><Age width='18px' height='18px' /> <AboutProfileAge />歳</dd>
                     <dd className='myLocation'><Location width='18px' height='18px' /> {author.location}</dd>
                     <dd className='myEmail'><a href='mailto:terada.syun.kim@gmail.com' className='myMail'><Email width='18px' height='18px' /> {author.email}</a></dd>
                     <dd className='myWord'> <Word width='18px' height='18px' /> {author.word}</dd>
