@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import '../styles/galleryArchive.css'
-import GalleryItem from '../components/GalleryItem'
+import GalleryItemJP from '../components/GalleryItemJP'
 
 class GalleryArchiveJP extends React.Component {
     render() {
@@ -9,12 +9,12 @@ class GalleryArchiveJP extends React.Component {
                 <div className='galleryArchive'>
                     <div className='desktop'>
                         <div className='wrapper-5-5'>
-                            <GalleryItem data={this.props.data} no={0} />
+                            <GalleryItemJP data={this.props.data} no={0} />
                             <div className='wrapper-50-50 gallery'>
-                                <GalleryItem data={this.props.data} no={1} />
+                                <GalleryItemJP data={this.props.data} no={1} />
                                 <div className='wrapper-5-5'>
-                                    <GalleryItem data={this.props.data} no={2} />
-                                    <GalleryItem data={this.props.data} no={3} />
+                                    <GalleryItemJP data={this.props.data} no={2} />
+                                    <GalleryItemJP data={this.props.data} no={3} />
                                 </div>
                             </div>
                         </div>
@@ -22,8 +22,8 @@ class GalleryArchiveJP extends React.Component {
                 </div>
                 <div className='galleryArchive-mobile'>
                     <div className='mobile'>
-                        <GalleryItem data={this.props.data} no={0} />
-                        <GalleryItem data={this.props.data} no={1} />
+                        <GalleryItemJP data={this.props.data} no={0} />
+                        <GalleryItemJP data={this.props.data} no={1} />
                     </div>
                 </div>
             </Fragment>

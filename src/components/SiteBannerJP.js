@@ -40,7 +40,7 @@ function SiteBannerJP(props) {
                         className="d-block"
                         src={`/images/home/${categoryArr[0]}.jpg`}
                         // default 포토 정해야함
-                        alt="Category 1"
+                        alt="Blog category banner1"
                     />
                     <Carousel.Caption>
                         <Link to={`/jp/${categoryArr[0]}`}>
@@ -55,7 +55,7 @@ function SiteBannerJP(props) {
                         className="d-block w-100"
                         src={`/images/home/${categoryArr[1]}.jpg`}
                         // default 포토 정해야함
-                        alt="Category 2"
+                        alt="Blog category banner2"
                     />
 
                     <Carousel.Caption>
@@ -71,7 +71,7 @@ function SiteBannerJP(props) {
                         className="d-block w-100"
                         src={`/images/home/${categoryArr[2]}.jpg`}
                         // default 포토 정해야함
-                        alt="Category 3"
+                        alt="Blog category banner3"
                     />
                     <Carousel.Caption>
                         <Link to={`/jp/${categoryArr[2]}`}>

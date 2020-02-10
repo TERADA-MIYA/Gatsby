@@ -1,27 +1,75 @@
 module.exports = {
   siteMetadata: {
-    kr: {
-      title: '테라다 단테의 블로그',
-      home: '홈',
-      category: '카테고리',
-      about: '어바웃',
-      footer: '풍요롭고 간편한 세상을 위해 상상하는 테라다의 기술 블로그',
-      author: {
-        name: '테라다 단테', location: '후쿠오카', email: 'terada.syun.kim@gmail.com', word: '세상은 상상하는 것으로부터',
+    title: {
+      kr: '테라다 단테의 블로그',
+      jp: 'Terada DanteノBlog'
+    },
+    home: {
+      kr: '홈',
+      jp: 'Home'
+    },
+    category: {
+      kr: '카테고리',
+      jp: 'Category'
+    },
+    about: {
+      kr: '어바웃',
+      jp: 'About'
+    },
+    description: {
+      kr: '풍요롭고 간편한 세상을 위해 상상하는 테라다의 기술 블로그',
+      jp: '楽な世界を作ろう🔥'
+    },
+    author: {
+      name: {
+        kr: '테라다 단테',
+        jp: 'Terada Dante'
+      },
+      location: {
+        kr: '후쿠오카',
+        jp: '福岡'
+      },
+      email: {
+        kr: 'terada.syun.kim@gmail.com',
+        jp: 'terada.syun.kim@gmail.com'
+      },
+      word: {
+        kr: '세상은 상상하는 것으로부터',
+        jp: '創造は想像から'
       }
     },
-    jp: {
-      title: 'Terada DanteノBlog',
-      home: 'Home',
-      category: 'Category',
-      about: 'About',
-      footer: '楽な世界を作ろう🔥',
-      author: {
-        name: 'Terada Dante', location: '福岡', email: 'terada.syun.kim@gmail.com', word: '創造は想像から',
-      }
-    },
+    siteUrl: `https://terada-dante.netlify.com`
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "테라다 단테의 기술 블로그",
+        short_name: "테라다 블로그",
+        description: "풍요롭고 간편한 세상을 위해 상상하는 테라다의 기술 블로그. 자바스크립트에서 웹 해킹까지",
+        start_url: "/",
+        lang: `kr`,
+        //background_color: "#6b37bf",
+        //theme_color: "#6b37bf",
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: "standalone",
+        icon: "static/favicon.jpg", // This path is relative to the root of the site.
+        // An optional attribute which provides support for CORS check.
+        // If you do not provide a crossOrigin option, it will skip CORS for manifest.
+        // Any invalid keyword or empty string defaults to `anonymous`
+        //crossOrigin: `use-credentials`,
+        localize: [
+          {
+            start_url: `/jp/`,
+            lang: `jp`,
+            name: `Terada Dante ノ Blog`,
+            short_name: `Terada Blog`,
+            description: `創造は想像から, 楽な世界のためにjavascriptからhackingまで`,
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,7 +79,18 @@ module.exports = {
         path: `${__dirname}/src/posts/`,
       },
     },
+    'gatsby-plugin-offline',
     `gatsby-transformer-remark`,
+    'gatsby-plugin-sitemap',
+    // 이하 사이트맵 로봇 나중에
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://terada-dante.netlify.com',
+        sitemap: 'https://terada-dante.netlify.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '*' }]
+      }
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {

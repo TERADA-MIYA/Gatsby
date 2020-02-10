@@ -5,19 +5,29 @@ import AboutWorkJP from '../components/AboutWorkJP'
 import { graphql, useStaticQuery } from 'gatsby'
 
 export default () => {
-    var data = useStaticQuery(graphql`
+  var data = useStaticQuery(graphql`
         query getAuthorInJapanese {
           allSite {
             edges {
               node {
                 siteMetadata {
-                  jp {
                     author {
-                      name
-                      location
-                      email
-                      word
-                    }
+                      name{
+                        kr
+                        jp
+                      }
+                      location{
+                        kr
+                        jp
+                      }
+                      email{
+                        kr
+                        jp
+                      }
+                      word{
+                        kr
+                        jp
+                      }
                   }
                 }
               }
@@ -25,14 +35,14 @@ export default () => {
           }
         }
     `)
-    return (
-        <div className='about'>
-            <div className='about-profile'>
-                <AboutProfileJP author={data.allSite.edges[0].node.siteMetadata.jp.author} />
-            </div>
-            <div className='about-work'>
-                <AboutWorkJP />
-            </div>
-        </div >
-    )
+  return (
+    <div className='about'>
+      <div className='about-profile'>
+        <AboutProfileJP author={data.allSite.edges[0].node.siteMetadata.author} />
+      </div>
+      <div className='about-work'>
+        <AboutWorkJP />
+      </div>
+    </div >
+  )
 }

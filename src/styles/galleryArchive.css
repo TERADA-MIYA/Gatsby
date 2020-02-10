@@ -47,6 +47,7 @@
     .title-preview {
         transform: none !important;
         -webkit-transform: translateY(100%) !important;
+        bottom: -120px !important;
     }
 }
 

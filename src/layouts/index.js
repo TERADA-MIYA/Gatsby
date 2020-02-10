@@ -2,10 +2,13 @@ import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import SiteHead from "../components/SiteHead"
 import Footer from '../components/Footer'
+import { Helmet } from 'react-helmet'
 
 export default ({ children }) => (
-    <div>
-        <div className="나중에 여기 한국 메타정보 들어감"></div>
+    <>
+        <Helmet>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </Helmet>
         <div className="viewport">
             <div className="viewport-top">
                 <SiteHead />
@@ -17,5 +20,5 @@ export default ({ children }) => (
                 <Footer />
             </div>
         </div>
-    </div>
+    </>
 )

@@ -7,6 +7,10 @@
   border: none !important;
 }
 
+.dropdown-menu {
+  min-width: 0 !important;
+}
+
 /*
 .navbar-toggler {
   border: 0;

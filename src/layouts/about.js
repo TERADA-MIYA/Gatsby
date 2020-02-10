@@ -11,13 +11,27 @@ export default () => {
             edges {
               node {
                 siteMetadata {
-                  kr {
                     author {
                       name
+                      {
+                        kr
+                        jp
+                      }
                       location
+                      {
+                        kr
+                        jp
+                      }
                       email
+                      {
+                        kr
+                        jp
+                      }
                       word
-                    }
+                      {
+                        kr
+                        jp
+                      }
                   }
                 }
               }
@@ -28,7 +42,7 @@ export default () => {
   return (
     <div className='about'>
       <div className='about-profile'>
-        <AboutProfile author={data.allSite.edges[0].node.siteMetadata.kr.author} />
+        <AboutProfile author={data.allSite.edges[0].node.siteMetadata.author} />
       </div>
       <div className='about-work'>
         <AboutWork />

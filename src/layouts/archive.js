@@ -6,22 +6,22 @@ import ArchivePagination from "../layouts/archivePagination"
 const Archive = props => {
   const data = useStaticQuery(graphql`
     query getAllPosts {
-      allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}){
-        edges{
-        node {
-          frontmatter {
-            title
-            date
-            excerpt
-            categories
-            tags
-            header{
-              image
+      allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {lang: {nin: "jp"}}}) {
+        edges {
+          node {
+            frontmatter {
+              title
+              date
+              excerpt
+              categories
+              tags
+              header {
+                image
+              }
             }
           }
         }
       }
-    }
   }
   `)
 

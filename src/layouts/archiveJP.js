@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import ArchivePagination from "../layouts/archivePagination"
+import ArchivePaginationJP from "../layouts/archivePaginationJP"
 
 // Archive는 독립적으로 Archive 생성
 const ArchiveJP = props => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query getAllPostsInJapanese {
         allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {lang: {eq: "jp"}}}) {
             edges {
@@ -25,15 +25,15 @@ const ArchiveJP = props => {
     }
   `)
 
-    const postArr = data.allMarkdownRemark.edges
-    const postFiltered = postArr.filter(function (e) {
-        return e.node.frontmatter.categories === props.categories
-    })
-    return (
-        <>
-            <ArchivePagination arr={postFiltered} />
-        </>
-    )
+  const postArr = data.allMarkdownRemark.edges
+  const postFiltered = postArr.filter(function (e) {
+    return e.node.frontmatter.categories === props.categories
+  })
+  return (
+    <>
+      <ArchivePaginationJP arr={postFiltered} />
+    </>
+  )
 }
 
 export default ArchiveJP

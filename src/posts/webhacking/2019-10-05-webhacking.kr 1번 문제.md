@@ -4,7 +4,6 @@ date: '2019-10-05'
 categories: 'webhacking'
 excerpt: 'Cookie injection과 php 기본 문법'
 tags: ['webhacking', 'php', 'mysql']
-lang: 'jp'
 ---
 
 ## 개요

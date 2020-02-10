@@ -11,8 +11,8 @@ function Footer() {
             edges {
               node {
                 siteMetadata {
-                  kr {
-                    footer
+                  description{
+                    kr
                   }
                 }
               }
@@ -20,13 +20,13 @@ function Footer() {
           }
         }
     `)
-  const footer = data.allSite.edges[0].node.siteMetadata.kr.footer
+  const description = data.allSite.edges[0].node.siteMetadata.description
   return (
     <div className='footer'>
       <Row>
         <Col sm={6}>
           <div className='footer-head'>
-            <p>{footer}</p>
+            <p>{description.kr}</p>
           </div>
         </Col>
         <Col sm={6}>

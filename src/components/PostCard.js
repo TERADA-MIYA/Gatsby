@@ -32,14 +32,14 @@ function PostCard(props) {
           <Row className="aling-items-center">
             <Col sm={6}>
               <img
-                alt="post Header"
-                src={headerImage !== undefined ? `/images/posts/header/${headerImage}` : 'https://source.unsplash.com/user/erondu/800x400'}
+                alt={`${title} post header`}
+                src={headerImage !== undefined ? `/images/posts/header/${headerImage}` : `/images/home/galleryArchive/${categories}.jpg`}
                 style={{ width: "100%", height: '100%' }}
               />
             </Col>
             <Col sm={6}>
               <div className='postcard-inner-desc'>
-                <p className="h3 mt-4 mt-lg-0">{title}</p>
+                <p className="h3">{title}</p>
                 <span className="text-muted">{<Date date={date} />}</span>
                 <h5>{excerpt}</h5>
                 <div>
