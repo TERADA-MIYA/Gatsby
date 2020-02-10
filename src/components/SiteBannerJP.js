@@ -4,7 +4,7 @@ import { Carousel } from "react-bootstrap"
 import '../styles/SiteBanner.css'
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-function SiteBannerJP(props) {
+function SiteBannerJP() {
     const data = useStaticQuery(graphql`
       query getRandomCategoriesInJapanese {
         allMarkdownRemark(filter: {frontmatter: {lang: {eq: "jp"}}}) {

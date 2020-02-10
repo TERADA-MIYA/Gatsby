@@ -4,7 +4,7 @@ import { Carousel } from "react-bootstrap"
 import '../styles/SiteBanner.css'
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-function SiteBanner(props) {
+function SiteBanner() {
   const data = useStaticQuery(graphql`
       query getRandomCategories {
         allMarkdownRemark {
