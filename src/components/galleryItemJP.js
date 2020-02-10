@@ -6,14 +6,14 @@ export default (props) => {
     const img = frontmatter.header === null ? `/images/home/galleryArchive/${frontmatter.categories}.jpg` : `/images/posts/header/${frontmatter.header.image}`
     return (
         <div className='galleryItem'>
-            <Link to={`/jp/${frontmatter.categories}/${frontmatter.date}-${frontmatter.title}`}>
+            <Link to={`/${frontmatter.categories}/${frontmatter.date}-${frontmatter.title}`}>
                 <img
                     className="galleryImg"
                     src={img}
                     alt={`${frontmatter.title} header`}
                 />
             </Link>
-            <Link to={`/jp/${frontmatter.categories}/${frontmatter.date}-${frontmatter.title}`}>
+            <Link to={`/${frontmatter.categories}/${frontmatter.date}-${frontmatter.title}`}>
                 <div className='post'>
                     <div className='post-name'>
                         {frontmatter.title}
