@@ -34,7 +34,7 @@ export default ({ data }) => {
           <meta property="og:url" content={`https://terada-dante.netlify.com/${post.frontmatter.categories}/${post.frontmatter.title}/`} />
           <meta property="og:description" content={`${post.frontmatter.excerpt}`} />
           <meta property="article:published_time" content={`${post.frontmatter.date}T00:00:00+00:00:00`} />
-          <link rel="canonical" href={`https://terada-dante.netlify.com/${post.frontmatter.categories}//${post.frontmatter.title}/`} />
+          <link rel="canonical" href={`https://terada-dante.netlify.com/${post.frontmatter.categories}/${post.frontmatter.title}/`} />
         </Helmet>
         <IndexJP>
           <Row>

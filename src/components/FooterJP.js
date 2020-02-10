@@ -31,7 +31,7 @@ function FooterJP() {
         </Col>
         <Col sm={6}>
           <div className='footer-tail'>
-            <Icon name={'gatsby'} w={24} h={24} /> Gatsby <Icon name={'netlify'} w={24} h={24} /> Netlify <Icon name={'bootstrap'} w={24} h={24} /> Bootstrap <Icon name={'materialui'} w={24} h={24} /> Material UI
+            <Icon name={'gatsby'} w={24} h={24} /> <Icon name={'netlify'} w={24} h={24} /> <Icon name={'bootstrap'} w={24} h={24} /> <Icon name={'materialui'} w={24} h={24} /> <Icon name={'nodejs'} w={24} h={24} /> <Icon name={'heroku'} w={24} h={24} />
           </div>
         </Col>
       </Row>

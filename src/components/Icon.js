@@ -25,6 +25,7 @@ import Bootstrap from '../../static/icons/bootstrap.svg'
 import Korea from '../../static/icons/korea.svg'
 import Japan from '../../static/icons/japan.svg'
 import Materialui from '../../static/icons/materialui.svg'
+import Heroku from '../../static/icons/heroku.svg'
 
 const Icon = (props) => {
     return (
@@ -34,6 +35,14 @@ const Icon = (props) => {
 
 function getIcon(name, w, h) {
     switch (name.toLowerCase()) {
+        case 'heroku':
+            return (
+                <Heroku width={`${w}`} height={`${h}`} />
+            )
+        case 'nodejs':
+            return (
+                <Nodejs width={`${w}`} height={`${h}`} />
+            )
         case 'materialui':
             return (
                 <Materialui width={`${w}`} height={`${h}`} />
