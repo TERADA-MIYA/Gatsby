@@ -2,7 +2,7 @@ import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import SiteHeadJP from "../components/SiteHeadJP"
 import SiteBannerJP from "../components/SiteBannerJP"
-import GalleryArchiveJP from '../layouts/GalleryArchiveJP'
+import GalleryArchiveJP from '../layouts/galleryArchiveJP'
 import FooterJP from '../components/FooterJP'
 import { graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet";

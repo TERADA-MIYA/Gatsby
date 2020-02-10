@@ -59,10 +59,6 @@ function getIcon(name, w, h) {
             return (
                 <Bootstrap width={`${w}`} height={`${h}`} />
             )
-        case 'nodejs':
-            return (
-                <Nodejs width={`${w}`} height={`${h}`} />
-            )
         case 'netlify':
             return (
                 <Netlify width={`${w}`} height={`${h}`} />

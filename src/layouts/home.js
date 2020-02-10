@@ -2,7 +2,7 @@ import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import SiteHead from "../components/SiteHead"
 import SiteBanner from "../components/SiteBanner"
-import GalleryArchive from '../layouts/GalleryArchive'
+import GalleryArchive from '../layouts/galleryArchive'
 import Footer from '../components/Footer'
 import { graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet";
