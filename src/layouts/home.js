@@ -1,11 +1,9 @@
 import React from "react"
-import "bootstrap/dist/css/bootstrap.min.css"
-import SiteHead from "../components/SiteHead"
 import SiteBanner from "../components/SiteBanner"
 import GalleryArchive from '../layouts/galleryArchive'
-import Footer from '../components/Footer'
 import { graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet";
+import Index from '../layouts/index'
 
 function Home() {
   const data = useStaticQuery(graphql`
@@ -28,7 +26,7 @@ function Home() {
       }
     `)
   return (
-    <>
+    <Index>
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,19 +41,9 @@ function Home() {
         <meta property="og:title" content="테라다 단테의 블로그" />
         <link rel="canonical" href="https://terada-dante.netlify.com//" />
       </Helmet>
-      <div className="viewport">
-        <div className="viewport-top">
-          <SiteHead />
-        </div>
-        <div className="viewport-middle" >
-          <SiteBanner />
-          <GalleryArchive data={data} />
-        </div>
-        <div className="viewport-bottom">
-          <Footer />
-        </div>
-      </div>
-    </>
+      <SiteBanner />
+      <GalleryArchive data={data} />
+    </Index>
   )
 }
 

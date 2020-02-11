@@ -1,11 +1,9 @@
 import React from "react"
-import "bootstrap/dist/css/bootstrap.min.css"
-import SiteHeadJP from "../components/SiteHeadJP"
 import SiteBannerJP from "../components/SiteBannerJP"
 import GalleryArchiveJP from '../layouts/galleryArchiveJP'
-import FooterJP from '../components/FooterJP'
 import { graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet";
+import IndexJP from '../layouts/indexJP'
 
 function HomeJP() {
   const data = useStaticQuery(graphql`
@@ -28,7 +26,7 @@ function HomeJP() {
       }
     `)
   return (
-    <>
+    <IndexJP>
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,19 +41,9 @@ function HomeJP() {
         <meta property="og:title" content="Terada DanteノBlog" />
         <link rel="canonical" href="https://terada-dante.netlify.com//" />
       </Helmet>
-      <div className="viewport">
-        <div className="viewport-top">
-          <SiteHeadJP />
-        </div>
-        <div className="viewport-middle" >
-          <SiteBannerJP />
-          <GalleryArchiveJP data={data} />
-        </div>
-        <div className="viewport-bottom">
-          <FooterJP />
-        </div>
-      </div>
-    </>
+      <SiteBannerJP />
+      <GalleryArchiveJP data={data} />
+    </IndexJP>
   )
 }
 

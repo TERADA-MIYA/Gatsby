@@ -3,7 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import SiteHeadJP from "../components/SiteHeadJP"
 import FooterJP from '../components/FooterJP'
 import { Helmet } from 'react-helmet'
-export default ({ children }) => {
+
+function IndexJP({ children }) {
     return (
         <>
             <Helmet>
@@ -25,3 +26,5 @@ export default ({ children }) => {
         </>
     )
 }
+
+export default IndexJP
