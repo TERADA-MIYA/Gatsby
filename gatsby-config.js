@@ -176,6 +176,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `terada-dante`
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-react-svg',
