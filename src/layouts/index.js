@@ -8,6 +8,7 @@ export default ({ children }) => (
     <>
         <Helmet>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="google-site-verification" content="jrx0iNmW3RB-iO8oyy8yI2Nws-0p9Dqy9DlD_UxKUiQ" />
         </Helmet>
         <div className="viewport">
             <div className="viewport-top">

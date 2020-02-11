@@ -40,7 +40,7 @@ export default ({ data }) => {
           <Row>
             <Col sm={12}>
               <div className="blog-post-head">
-                <img alt='blog-post-head' src={postHeaderImage !== undefined ? `/images/posts/header/${postHeaderImage}` : 'https://source.unsplash.com/random/1600x900'} />
+                <img alt={`${post.frontmatter.title}`} src={postHeaderImage !== undefined ? `/images/posts/header/${postHeaderImage}` : `/images/home/${post.frontmatter.categories}.jpg`} />
               </div>
             </Col>
           </Row>
@@ -106,7 +106,7 @@ export default ({ data }) => {
           <Row>
             <Col sm={12}>
               <div className="blog-post-head">
-                <img alt='blog-post-head' src={postHeaderImage !== undefined ? `/images/posts/header/${postHeaderImage}` : 'https://source.unsplash.com/random/1600x900'} />
+                <img alt={`${post.frontmatter.title}`} src={postHeaderImage !== undefined ? `/images/posts/header/${postHeaderImage}` : `/images/home/${post.frontmatter.categories}.jpg`} />
               </div>
             </Col>
           </Row>

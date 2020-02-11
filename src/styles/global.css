@@ -8,6 +8,13 @@ html * {
     font-family: 'Sawarabi Gothic', sans-serif;
 }
 
+blockquote {
+    border-left: 10px solid purple;
+    padding-left: 15px;
+    background-color: rgba(221, 160, 221, 0.3);
+    font-weight: bold;
+}
+
 .row,
 .col,
 .col-1,

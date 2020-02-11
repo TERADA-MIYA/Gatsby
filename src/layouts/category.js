@@ -72,7 +72,13 @@ function Category() {
                 </div>
             </div>
             <div className='mobile'>
-                {/* 모바일 용 카테고리 화면 */}
+                <div className="category">
+                    <div className="quotes">
+                        {result}
+                        <div className="bg"></div>
+                        <div className='blank'></div>
+                    </div>
+                </div>
             </div>
         </Fragment>
     )
