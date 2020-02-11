@@ -80,21 +80,33 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    `gatsby-transformer-remark`,
     'gatsby-plugin-sitemap',
-    // 이하 사이트맵 로봇 나중에
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://terada-dante.netlify.com',
         sitemap: 'https://terada-dante.netlify.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '*' }]
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `@raae/gatsby-remark-oembed`,
+            options: {
+              // usePrefix defaults to false
+              // usePrefix: true is the same as ["oembed"]
+              usePrefix: ["oembed", "video"],
+              providers: {
+                // Important to exclude providers
+                // that adds js to the page.
+                // If you do not need them.
+                // exclude: ["Reddit"]
+              }
+            }
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -160,7 +172,7 @@ module.exports = {
               escapeEntities: {},
             },
           },
-          `gatsby-remark-autolink-headers`
+          `gatsby-remark-autolink-headers`,
         ],
       },
     },

@@ -18,7 +18,6 @@ export default ({ data }) => {
       <Icon name={e} w={36} h={36} key={e} />
     )
   })
-  console.log(post.frontmatter)
   if (post.frontmatter.lang === 'jp') {
     return (
       <>

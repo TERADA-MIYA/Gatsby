@@ -15,6 +15,80 @@ blockquote {
     font-weight: bold;
 }
 
+/* NOTICE */
+.notice {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #494e52;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: .75em !important;
+    text-indent: initial;
+    background-color: #f8f9f9;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(189, 193, 196, 0.25);
+}
+
+.notice--primary {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #494e52;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: .75em !important;
+    text-indent: initial;
+    background-color: #f1f1f2;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(111, 119, 125, 0.25);
+}
+
+.notice--info {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #494e52;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: .75em !important;
+    text-indent: initial;
+    background-color: #ebf5f8;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(59, 156, 186, 0.25);
+}
+
+.notice--warning {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #494e52;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: .75em !important;
+    text-indent: initial;
+    background-color: #fbf2e6;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(214, 127, 5, 0.25);
+}
+
+.notice--success {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #494e52;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: .75em !important;
+    text-indent: initial;
+    background-color: #ecf6ec;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(63, 166, 63, 0.25);
+}
+
+.notice--danger {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #494e52;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: .75em !important;
+    text-indent: initial;
+    background-color: #fdefef;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(238, 95, 91, 0.25);
+}
+
+/* NOTICE */
 .row,
 .col,
 .col-1,

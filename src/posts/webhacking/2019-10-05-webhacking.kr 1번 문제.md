@@ -7,6 +7,7 @@ tags: ['webhacking', 'php', 'mysql']
 ---
 
 ## 개요
+---
 > Simple is the best.
 
 간단한 것이 최고라는 말이 있죠. 간단하다고 해서 중요하지 않은 것은 아닙니다. 오히려 가장 중요할지도 모르죠. 
@@ -35,13 +36,11 @@ view-source를 눌러 소스코드🧾를 확인해봅시다.
 **문제의 목표**는 line 6의 solve(1)을 실행시키는 것으로 보입니다. 분석에서는 [풀이](#풀이)에 앞서 소스코드에 사용된 함수들을 설명합니다. 
 
 ## 분석
-
+---
 ### if
 `if`는 조건문이 참일 때 지정된 내용을 실행합니다. `if`는 다른 프로그래밍 언어와 큰 차이가 없고, 그 문법이 어렵지 않으므로 설명을 생략합니다.
 
 ### echo()
-
-<a class="PHP">PHP</a><a class="PHPver">7.0</a>  
 
 `echo` 는 data를 출력합니다.
 #### echo() 문법
@@ -53,17 +52,17 @@ echo (string $arg1 [, string $...]);
 
 #### echo() 예제
 ~~~~php
-  echo ("Welcome");             // Welcome
-    
+  echo ("Welcome");
+  // Welcome
   $_greeting = "Hello";
-  echo ("${_greeting} World!"); // Hello World!
-  echo "I am", " ", 20+1;       // I am 21
+  echo ("${_greeting} World!");
+  // Hello World!
+  echo "I am", " ", 20+1;
+  // I am 21
 ~~~~
 *Line 4*: 중괄호 속에 `$`가 없다는 것에 유의하자.
 
 ### is_numeric()
-
-<a class="PHP">PHP</a><a class="PHPver">7.0</a>  
 
 `is_numeric()`은 데이터가 numeric(`integer`,`double`, `float`)한지를 확인합니다.
 
@@ -110,6 +109,7 @@ echo $_agent['is_happy']; // 1
 즉, $_COOKIE['user_lv'] 이란 _COOKIE라는 배열의 'user_lv' 인의스(index)에 접근하는 것을 뜻합니다.
 
 ## 풀이
+---
 `view-source`의 line 3, 4는 다음과 같이 해석할 수 있습니다.
 ~~~~php
 if(!is_numeric($_COOKIE['user_lv'])) 
