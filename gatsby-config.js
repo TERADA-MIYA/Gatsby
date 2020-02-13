@@ -38,7 +38,7 @@ module.exports = {
         jp: '創造は想像から'
       }
     },
-    url: `https://terada-dante.netlify.com`,
+    siteUrl: `https://terada-dante.netlify.com`,
     disqusShortname: 'terada-dante'
   },
   plugins: [
