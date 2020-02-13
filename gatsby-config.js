@@ -39,6 +39,7 @@ module.exports = {
       }
     },
     siteUrl: `https://terada-dante.netlify.com`,
+    url: `https://terada-dante.netlify.com`,
     disqusShortname: 'terada-dante'
   },
   plugins: [

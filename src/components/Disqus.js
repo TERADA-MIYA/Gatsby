@@ -19,7 +19,7 @@ const DisqusDetails = (props) => {
     }
 
     let disqusConfig = {
-        url: siteMetadata.siteUrl + props.post.fields.slug,
+        url: siteMetadata.url + props.post.fields.slug,
         identifier: props.post.id,
         title: props.post.frontmatter.title
     }
