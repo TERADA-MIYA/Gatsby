@@ -7,6 +7,7 @@ import { Row, Col } from 'react-bootstrap'
 import '../styles/post.css'
 import Icon from '../components/Icon'
 import { Helmet } from "react-helmet"
+import DisqusDetails from '../components/Disqus'
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -142,6 +143,13 @@ export default ({ data }) => {
                     {result}
                   </div>
                   <div className='blog-post-item' dangerouslySetInnerHTML={{ __html: post.html }} />
+                  <Row>
+                    <Col>
+                      <div className='blog-post-disqus'>
+                        <DisqusDetails post={post} />
+                      </div>
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
             </Col>
@@ -156,8 +164,9 @@ export const query = graphql`
   query($slug: String!) {
           markdownRemark(fields: {slug: {eq: $slug }}) {
           html
+          id
       frontmatter {
-          title
+        title
         categories
         header{
           image
@@ -167,7 +176,7 @@ export const query = graphql`
       }
       headings{
           value
-        depth
+          depth
       }
       fields{
           slug

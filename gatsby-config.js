@@ -38,7 +38,8 @@ module.exports = {
         jp: '創造は想像から'
       }
     },
-    siteUrl: `https://terada-dante.netlify.com`
+    url: `https://terada-dante.netlify.com`,
+    disqusShortname: 'terada-dante'
   },
   plugins: [
     {
@@ -172,7 +173,15 @@ module.exports = {
               escapeEntities: {},
             },
           },
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`
+            }
+          },
           `gatsby-remark-autolink-headers`,
+
         ],
       },
     },

@@ -8,6 +8,43 @@ html * {
     font-family: 'Sawarabi Gothic', sans-serif;
 }
 
+/* PrismJS override */
+.language-text {
+    color: purple !important;
+}
+
+/* PrismJS override */
+/* POST */
+table {
+    margin: 10px 0px;
+    width: 100%;
+}
+
+table tbody {
+    border-bottom: 2px solid #dee2e6;
+}
+
+table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+table tr {
+    margin: 0.25rem;
+}
+
+table tr,
+table thead {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+table tbody tr:nth-of-type(2n+1) {
+    background-color:
+        rgba(0, 0, 0, .05);
+}
+
 blockquote {
     border-left: 10px solid purple;
     padding-left: 15px;
@@ -15,6 +52,7 @@ blockquote {
     font-weight: bold;
 }
 
+/* POST */
 /* NOTICE */
 .notice {
     margin: 2em 0 !important;
